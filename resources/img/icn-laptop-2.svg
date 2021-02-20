@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="112.402" height="72.891" viewBox="0 0 112.402 72.891">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#e1e1e1;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="prefix__icn-laptop" transform="translate(-363.799 -243.12)">
+        <path id="prefix__Path_4471" d="M465.68 244.12h2.034a5.552 5.552 0 0 1 5.552 5.552v57.062H372.7v-57.062a5.552 5.552 0 0 1 5.552-5.552h5.22" class="prefix__cls-1" data-name="Path 4471"/>
+        <path id="prefix__Path_4472" d="M475.2 306.737v1.911a6.363 6.363 0 0 1-6.364 6.363h-97.674a6.363 6.363 0 0 1-6.363-6.363v-1.911h46.889v.885a2.787 2.787 0 0 0 2.787 2.787h11.05a2.787 2.787 0 0 0 2.787-2.787v-.885z" class="prefix__cls-1" data-name="Path 4472"/>
+    </g>
+</svg>

@@ -1,0 +1,164 @@
+@import "./base/variables";
+
+// FOUNDATION FRAMEWORK
+@import '../vendor/foundation/scss/foundation';
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Grids
+@include foundation-xy-grid-classes;
+// @include foundation-grid;
+// @include foundation-flex-grid;
+
+// Generic components
+@include foundation-button;
+@include foundation-button-group;
+@include foundation-close-button;
+@include foundation-label;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-switch;
+@include foundation-table;
+
+// Basic components
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-dropdown;
+@include foundation-pagination;
+@include foundation-tooltip;
+
+// Containers
+@include foundation-accordion;
+@include foundation-media-object;
+@include foundation-orbit;
+@include foundation-responsive-embed;
+@include foundation-tabs;
+@include foundation-thumbnail;
+
+// Menu-based containers
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-accordion-menu;
+@include foundation-drilldown-menu;
+@include foundation-dropdown-menu;
+
+// Layout components
+@include foundation-off-canvas;
+@include foundation-reveal;
+@include foundation-sticky;
+@include foundation-title-bar;
+@include foundation-top-bar;
+
+// Helpers
+@include foundation-float-classes;
+@include foundation-flex-classes;
+@include foundation-visibility-classes;
+@include foundation-prototype-classes;
+
+
+
+// Base Styles
+@import "./base/fonts";
+@import "./base/mixins";
+@import "./base/typography";
+@import "./base/utilities";
+@import "./base/forms";
+@import "./base/buttons";
+@import "./base/components";
+@import "./base/icons";
+@import "./base/animations";
+
+
+// Plugins
+@import '../vendor/slick/slick.scss';
+
+
+
+// HEADER STICKY NAV
+@import "./header/hsnav-1";
+@import "./header/hsnav-2";
+@import "./header/hsnav-3"; 
+@import "./header/hsnav-4";
+@import "./header/hsnav-5";
+@import "./header/hsnav-6";
+@import "./header/hsnav-7";
+@import "./header/hsnav-8";
+@import "./header/hsnav-9";
+@import "./header/hsnav-10";
+@import "./header/hsnav-11";
+@import "./header/hsnav-12";
+
+
+// HERO / BANNER
+@import "./hero/hero-1";
+@import "./hero/hero-2";
+@import "./hero/hero-3";
+@import "./hero/hero-4";
+@import "./hero/hero-5";
+@import "./hero/hero-6";
+@import "./hero/hero-7";
+
+
+// TWO COLUMNS 
+@import "./columns/2cols-1";
+@import "./columns/2cols-2";
+@import "./columns/2cols-3"; 
+@import "./columns/2cols-4";
+@import "./columns/2cols-5";
+@import "./columns/2cols-6";
+@import "./columns/2cols-7";
+@import "./columns/2cols-8";
+
+ 
+// THREE COLUMNS
+@import "./columns/3cols-1";
+@import "./columns/3cols-2";
+@import "./columns/3cols-3"; 
+
+
+// FOUR COLUMNS
+@import "./columns/4cols-1";
+@import "./columns/4cols-2";
+@import "./columns/4cols-3";
+
+
+// OVERLAP
+@import "./overlap/overlap-1";
+@import "./overlap/overlap-2";
+@import "./overlap/overlap-3";
+@import "./overlap/overlap-4";
+
+
+// TESTIMONIAL
+@import "./testimonial/testi-1";
+@import "./testimonial/testi-2";
+@import "./testimonial/testi-3";
+@import "./testimonial/testi-4";
+@import "./testimonial/testi-5";
+@import "./testimonial/testi-6";
+@import "./testimonial/testi-7";
+@import "./testimonial/testi-8";
+
+
+// CTA
+@import "./cta/cta-1";
+@import "./cta/cta-2"; 
+@import "./cta/cta-3";
+@import "./cta/cta-4";
+@import "./cta/cta-5";  
+ 
+
+// FOOTER
+@import "./footer/foot-1";
+
+
+
+
+
+
+

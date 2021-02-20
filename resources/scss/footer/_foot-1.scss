@@ -1,0 +1,188 @@
+footer {
+    position: relative;
+
+    hr {
+        border-color: lighten($color-dark, 80%);
+        max-width: 100%;
+        margin-top: 0;
+        margin-bottom: 100px;
+    }
+
+    .foot-menu {
+        position: relative;
+        max-width: 1000px;
+        ul {
+            column-count: 4;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                vertical-align: top;
+                width: 100%;
+                margin-bottom: 30px;
+
+                &.fm-2 {
+                    min-height: 100px;
+                }
+                &.fm-3 {
+                    min-height: 120px;
+                }
+                &.fm-4 {
+                    min-height: 120px;
+                }
+                
+                &.fm-6 {
+                    min-height: 100px;
+                }
+
+                a {
+                    font-weight: bold;
+                    color: $color-dark;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                }
+            }
+
+            ul {
+                display: block;
+                column-count: 1;
+                margin: 0;
+                padding:0;
+                li {
+                    margin:0;
+                    a {
+                        position: relative;
+                        font-weight: 300;
+                        padding:0 0 0 25px;
+
+                        &:before {
+                            content: "";
+                            border-top: 1px solid $color-primary;
+                            left: 0;
+                            width: 15px;
+                            top:10px;
+                            position: absolute;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @include media(max-width, 1023px) { 
+            ul {
+                column-count: 2;
+
+                li {
+                    min-height: 1px !important;
+                }
+            }
+        }
+        
+        @include media(max-width, 639px) { 
+            ul {
+                column-count: 1;
+            }
+        }
+    }
+
+    .foot-social {
+        position: relative;
+        margin-right: 15px;
+        ul {
+            margin: 0;
+            padding:0;
+            display: inline-block;
+            vertical-align: middle;
+            
+            li {
+                list-style: none;
+                display: inline-block;
+                vertical-align: middle;
+                padding: 0 5px;
+            }
+        }
+
+
+        .rating-list {
+            margin-left: -15px;
+
+            li {
+                padding: 0 15px;
+            }
+        }
+        
+        
+        @include media(max-width, 1023px) { 
+            .social-list {
+                margin-bottom: 20px;
+            }
+        }
+
+    }
+
+    .copyright {
+        font-size: 14px;
+        padding:0 0 40px;
+        span {
+            display: inline-block;
+            
+            &.db {
+                
+                &:after {
+                    content: "-";
+                    margin: 0 0 0 5px;
+                }
+            }
+
+        }
+        
+        @include media(max-width, 1023px) { 
+            span {
+                display: block;
+
+                &:after {
+                    display: none;
+                }
+            }
+        }
+        
+        @include media(max-width, 375px) { 
+            font-size: 13px;
+        }
+    }
+
+    .designby {
+        display: block;
+        float: none;
+        text-align: center;
+    }
+
+    .foot-logo {
+        @include media(max-width, 1599px) {
+            margin-right: 50px;
+         }
+
+    }
+    
+    .back-top {
+        position: absolute;
+        right: 40px;
+        bottom: 40px;
+        z-index: 9999;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: solid 3px rgba(119,119,119, .2);
+        text-align: center;
+
+        img {
+            width: 10px;
+            transform: rotate(-90deg);
+        }
+
+        @include media(max-width, 1599px) {
+            right:15px;
+            bottom: 25px;
+         }
+    }
+} 

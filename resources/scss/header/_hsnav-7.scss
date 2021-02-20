@@ -1,0 +1,492 @@
+
+/* Header Sticky Nav Style 7 */
+header {
+	position: relative;
+	z-index: 9999;
+	
+	&.overlap {
+		position: absolute;
+		left: 0;
+		right: 0;
+		//z-index: 999; 
+		z-index: 9999; 
+	}
+	
+	.hsnav-s7 {
+		//max-width: none !important;
+		width: 100%;
+		
+		&.sticky {
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+		}
+		&.is-stuck {
+			position: fixed;
+		}
+		@at-root header.show-menu .hsnav-s7 {
+			margin-top: 0 !important;
+		}
+
+		.navbar {
+			position: relative;
+			min-height: 105px;
+
+			.logo, .navlogo {
+				float: left;
+				margin-left: 50px;
+				margin-top: 14px;
+				width: 120px;
+				position: relative;
+
+				.alt {
+					font:bold 20px "prometo", sans-serif;
+					color: $color-black;
+					white-space: nowrap;
+				}
+
+				@at-root header.show-menu .hsnav-s7 .navlogo {
+					z-index: 100;
+
+					.alt {
+						color: $color-white;
+						transition-delay: .5s;
+					}
+				}
+			}
+
+			.navmenu {
+				padding: 0;
+				position: fixed;
+				top:0;
+				height: 100vh;
+				left: 0;
+				right: 0;
+				opacity: 0;
+				visibility: hidden;
+				transition: all .5s ease;
+
+				.menu-items {
+					ul {
+						display: block;
+						margin: 20px 0;
+						padding:0; 
+
+						li {
+							text-align: left;
+							display: block;
+							margin: 0;
+							a {
+								font:bold 40px/1 $heading-font-family;
+								color:$color-white; 
+								//text-transform: uppercase; 
+								padding:8px 0; 
+								position: relative;
+								letter-spacing: 2px;
+								display: block;
+
+								&:before {
+									position: absolute; 
+									left: 25px; 
+									top:50%; 
+									margin-top:-22px; 
+								}
+
+								&:hover {
+									
+								}
+							}
+							ul {
+								margin: 0 0 10px;
+								padding: 0;
+								//background:$color-white;
+								li {
+									position: relative;
+
+									a {
+										position: relative;
+										text-transform: uppercase; 
+										text-align: left; 
+										color: $color-grey-1; 
+										font-size: 20px;
+										font-weight: 500;
+										padding: 10px 0 10px 25px;
+										
+
+										&:before {
+											content: "";
+											border-top:1px solid $color-primary;
+											position: absolute;
+											left: 0;
+											top:50%;
+											width: 18px;
+											margin: 0;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.submenu-toggle {
+					background:lighten($color-black, 90%)  url(../img/icn-plus.svg) no-repeat 17px center / 15px; 
+					width:55px; 
+					height: 47px; 
+					right: 0;
+
+					&[aria-expanded="true"] {
+						background-image: url(../img/icn-close-r.svg); 
+					}
+					&:after {
+						content: ""; border:0;
+					}
+				}
+				
+				@at-root header.show-menu .hsnav-s7 .navmenu {
+					opacity: 1;
+					visibility: visible;
+					//margin-left: 20px;
+					transition: all .5s ease .5s;
+				}
+
+				.menu-img {
+					width: 40%;
+					height: 100vh;
+					float: left;
+					padding: 0 100px 0 0;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+
+				.menu-items {
+					//float: left;
+					height: 100vh;
+					display: flex;
+					align-items: center;
+					padding: 100px 0 120px;
+					opacity: 0;
+					position: relative;
+					left: -100px;
+					transition: all .5s ease .7s;
+					overflow: auto;
+
+					@at-root header.show-menu .hsnav-s7 .navmenu .menu-items {
+						opacity: 1;
+						visibility: visible;
+						left: 0;
+					}
+				}
+
+				.menu-info {
+					position: absolute;
+					bottom: 10px;
+					left: 70%;
+					width: 330px;
+					max-width: 100%;
+					color: $color-white;
+					transition: all .5s ease .9s;
+					opacity: 0;
+
+					p {
+						line-height: 2;
+					}
+
+					ul {
+						margin:0;
+						padding:0;
+						li {
+							display: inline-block;
+							margin:0 12px 0 0;
+
+							img {
+								filter: invert(100%);
+							}
+						}
+					}
+					
+					@at-root header.show-menu .hsnav-s7 .navmenu .menu-info {
+						opacity: 1;
+						visibility: visible;
+						bottom: 100px;
+					}
+				}
+			}
+
+			.mobmenu {
+				display: none;
+			}
+			
+			.navutil {
+				float: right;
+				min-height: 80px;
+				padding: 32px 0 0;
+				margin:0 90px 0 0;
+				position: relative;
+
+				a {
+					display: inline-block;
+					padding: 5px 0;
+					margin: 0 40px;
+					color: $color-dark;
+					font-size: 20px;
+					font-weight: bold;
+					line-height: 1;
+					text-transform: uppercase;
+
+					&:hover {
+						color: $color-primary;
+					}
+				}
+
+				.lets {
+					position: relative;
+					
+					&:after {
+						content: "";
+						position: absolute;
+						left: -20px;
+						border-bottom: 2px solid $color-primary;
+						right: 0;
+						bottom: -3px;
+						opacity: 0.5;
+						transition: all 0.3s ease;
+					}
+
+					&:hover {
+						&:after {
+							left: 0;
+						}
+					}
+				}
+
+				@at-root header.show-menu .hsnav-s7 .navutil {
+					z-index: 100;
+
+					a {
+						color: $color-white;
+					}
+
+					.lets {
+						color: $color-grey;
+					}
+				}
+			}
+			
+			.navicon {
+				width: 40px; 
+				height: 40px; 
+				position: absolute;  
+				right: 30px; 
+				top: 30px; 
+				font-size: 0; 
+				cursor: pointer; 
+				display: block;
+				border-radius: 50%;
+				transition: all 0.5s ease;
+				background: transparent; //$color-white;
+				z-index: 2;
+
+				&:before {
+					content: "";  
+					position: absolute; 
+					border-top: 2px solid $color-dark; 
+					border-bottom: 2px solid $color-dark; 
+					left: 10px;
+					top: 14px;
+					width: 20px;
+					height: 14px;
+					transition: all 0.5s ease;
+				}
+				&:after {
+					content: ""; 
+					position: absolute; 
+					border-top: 2px solid $color-dark; 
+					right: 10px;
+					top: 20px;
+					width: 15px;
+					transition: all 0.5s ease;
+				}
+				
+				&:hover {
+					background: $color-primary;
+					
+					&:before, &:after {
+						border-color: $color-white;
+					}
+				}
+
+				@at-root header.show-menu .hsnav-s7 .navicon {
+					background: none;
+					
+					&:before {
+						box-shadow: none; 
+						top: 20px; 
+						height: 3px; 
+						transform: rotate(-45deg); 
+						border-bottom: 0; 
+						border-color: $color-white;
+					}
+					&:after {
+						width: 20px;
+						transform: rotate(45deg);
+						border-color: $color-white;
+					}
+				}
+
+			}
+
+			.overlay {
+				position: fixed;
+				width: 1px;
+				height: 1px;
+				border-radius: 50%;
+				right: 50px;
+				top: 45px;
+				background: $color-black;
+				z-index: -1;
+				transition: all 0.5s ease-in-out;
+
+
+				@at-root header.show-menu .hsnav-s7 .overlay {					
+					top: calc(90px - 112vw);
+					right: calc(100px - 112vw);
+					width: 350vw;
+					height: 350vw;
+				}
+			}
+			
+			@include media(max-width, 1600px) {
+				.logo, .navlogo {
+					margin-left: 30px;
+				}
+			}
+
+			@include media(max-width, 1366px) {
+				
+				.navmenu {
+					.menu-items {
+						ul li {
+							a {
+								font-size: 30px;
+							}
+
+							ul li a {
+								font-size: 18px;
+							}
+						}
+					}
+
+					.menu-img {
+						width: 35%;
+						padding: 0 50px 0 0;
+					}
+				}
+
+			}
+
+			@include media(max-width, 1023px) {
+
+				.navmenu {
+					.menu-img {
+						height: 290px;
+						float: none;
+						width: 100%;
+						padding: 0;
+						background: $color-black;
+
+						img {
+							opacity: 0.8;
+						}
+					}
+
+					.menu-items {
+						height: calc(100vh - 290px);
+						display: block;
+						padding: 0;
+
+						ul {
+							margin: 0;
+							padding: 30px;
+						}
+					}
+					
+					.menu-info {
+						left: auto;
+						right: 0;
+					}
+				}
+				
+				.navutil {
+					margin-right: 90px;
+					display: none;
+				}
+
+			}
+			
+			@include media(max-width, 767px) {
+				.logo, .navlogo {
+					width: 90px;
+
+					.alt {
+						font-size: 15px;
+					}
+				}
+
+			}
+			
+			@include media(max-width, 639px) {
+				.navmenu {
+					padding: 130px 0 0;
+					overflow: auto;
+					.menu-img {
+						height: 130px;
+						position: fixed;
+						top:0;
+						left: 0;
+						z-index: 100;
+					}
+
+					.menu-items {
+						display: block;
+						padding: 0;
+						overflow: visible;
+						height: auto;
+
+						ul {
+							margin: 0;
+							padding: 30px;
+						}
+					}
+					
+					.menu-info {
+						position: relative;
+						padding: 20px 30px;
+						bottom: auto;
+
+						p {
+							margin-bottom: 15px;
+							line-height: 1.5;
+						}
+					}
+				}
+			}
+			
+			@include media(max-width, 413px) {
+				.logo, .navlogo {
+					margin-left: 15px;
+				}
+
+				.navicon {
+					right: 15px;
+				}
+			}
+		}
+
+	}
+}

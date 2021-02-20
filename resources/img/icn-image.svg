@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.425" height="22.567" viewBox="0 0 29.425 22.567">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;stroke:#eb1c24}
+        </style>
+    </defs>
+    <g id="prefix__icn-part-image" transform="translate(-183.928 -232.637)">
+        <rect id="prefix__Rectangle_30" width="27.425" height="20.567" fill="none" stroke="#222" stroke-linecap="round" stroke-linejoin="round" stroke-width="2px" data-name="Rectangle 30" rx="3.049" transform="translate(184.928 233.637)"/>
+        <path id="prefix__Path_4487" d="M213.833 260.692l7.255-5.819 3.988 4.69 3.9 4.594" class="prefix__cls-2" data-name="Path 4487" transform="translate(-25.717 -13.145)"/>
+        <path id="prefix__Path_4488" d="M230.139 259.861l5.015-4.026 4.792 5.64" class="prefix__cls-2" data-name="Path 4488" transform="translate(-30.781 -13.444)"/>
+        <circle id="prefix__Ellipse_12" cx="2.002" cy="2.002" r="2.002" class="prefix__cls-2" data-name="Ellipse 12" transform="translate(188.129 236.714)"/>
+    </g>
+</svg>

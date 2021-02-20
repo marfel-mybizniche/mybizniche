@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53.835" height="19.649" viewBox="0 0 53.835 19.649">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#222;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="prefix__icn-part-arrow-graph" transform="translate(-1068.625 -244.324)">
+        <path id="prefix__Path_4478" d="M1109.146 266.762l7.015 6.742 6.918-6.029" class="prefix__cls-1" data-name="Path 4478" transform="translate(-14.325 -10.862)"/>
+        <path id="prefix__Line_21" d="M9.946 0L0 8.67" class="prefix__cls-1" data-name="Line 21" transform="translate(1111.104 245.892)"/>
+        <path id="prefix__Path_4479" d="M1074.25 270.239l16.652-14.47 5.871 5.642" class="prefix__cls-1" data-name="Path 4479" transform="translate(-4.214 -7.677)"/>
+        <path id="prefix__Path_4480" d="M1140.517 252.025l3.948.459-.459 3.948" class="prefix__cls-1" data-name="Path 4480" transform="translate(-23.415 -6.592)"/>
+    </g>
+</svg>

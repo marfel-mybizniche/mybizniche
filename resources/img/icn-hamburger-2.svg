@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 22 12">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="prefix__icn-hamburger" transform="translate(-1618.889 -44)">
+        <path id="prefix__line" d="M20 0H0" class="prefix__cls-1" transform="translate(1619.889 45)"/>
+        <path id="prefix__line-2" d="M11 0H0" class="prefix__cls-1" data-name="line" transform="translate(1628.889 50)"/>
+        <path id="prefix__line-3" d="M15 0H0" class="prefix__cls-1" data-name="line" transform="translate(1624.889 55)"/>
+    </g>
+</svg>

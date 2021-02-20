@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54.112" height="38.518" viewBox="0 0 54.112 38.518">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#eb1c24;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="prefix__icn-crown" transform="translate(-631.404 -786.202)">
+        <path id="prefix__Path_4504" d="M661.394 795.809l7.779 10.084 11.272-7.08" class="prefix__cls-1" data-name="Path 4504"/>
+        <path id="prefix__Path_4505" d="M681.774 799.687l-4.924 16.962h-36.777l-4.928-16.962" class="prefix__cls-1" data-name="Path 4505"/>
+        <path id="prefix__Path_4506" d="M636.475 798.813l11.272 7.08 7.779-10.08" class="prefix__cls-1" data-name="Path 4506"/>
+        <path id="prefix__Path_4507" d="M663.265 792.007a4.8 4.8 0 1 1-4.8-4.8 4.8 4.8 0 0 1 4.8 4.8z" class="prefix__cls-1" data-name="Path 4507"/>
+        <path id="prefix__Path_4508" d="M684.516 797.492a2.251 2.251 0 1 1-2.251-2.251 2.251 2.251 0 0 1 2.251 2.251z" class="prefix__cls-1" data-name="Path 4508"/>
+        <path id="prefix__Path_4509" d="M636.906 797.492a2.251 2.251 0 1 1-2.251-2.251 2.251 2.251 0 0 1 2.251 2.251z" class="prefix__cls-1" data-name="Path 4509"/>
+        <path id="prefix__Path_4510" d="M676.849 816.652l.835 2.439c.729 2.131-.341 4.629-1.982 4.629h-34.483c-1.641 0-2.711-2.5-1.982-4.629l.834-2.439" class="prefix__cls-1" data-name="Path 4510"/>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="41.08" height="37.734" viewBox="0 0 41.08 37.734">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#eb1c24;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="prefix__icn-part-magnifying-glass" transform="translate(1.41 1.005)">
+        <path id="prefix__Path_4477" d="M1121.536 280.547a12.534 12.534 0 1 1 1.358-17.674 12.535 12.535 0 0 1-1.358 17.674z" class="prefix__cls-1" data-name="Path 4477" transform="translate(-1087.247 -258.497)"/>
+        <circle id="prefix__Ellipse_8" cx="9.41" cy="9.41" r="9.41" class="prefix__cls-1" data-name="Ellipse 8" transform="rotate(-71.89 19.925 -.558)"/>
+        <path id="prefix__Line_20" d="M1.866 0L0 1.596" class="prefix__cls-1" data-name="Line 20" transform="translate(14.746 20.695)"/>
+        <path id="prefix__Rectangle_29" d="M0 0H3.793V17.8H0z" class="prefix__cls-1" data-name="Rectangle 29" transform="rotate(49.38 -15.921 25.126)"/>
+    </g>
+</svg>

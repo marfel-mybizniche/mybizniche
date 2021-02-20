@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="38.379" height="68.847" viewBox="0 0 38.379 68.847">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#eb1c24;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="prefix__icn-part-bulb" transform="translate(1.256 1.158)">
+        <path id="prefix__Path_4481" d="M164.4 266.948a20.735 20.735 0 0 0 5.459 8.728 8.923 8.923 0 0 1 2.787 5.437l1.05 9.264a3.948 3.948 0 0 0 3.925 3.506h13.074a3.948 3.948 0 0 0 3.926-3.506l1.029-9.074a8.882 8.882 0 0 1 2.688-5.511 20.9 20.9 0 0 0 1.527-1.591" class="prefix__cls-1" data-name="Path 4481" transform="translate(-164.398 -240.255)"/>
+        <path id="prefix__Path_4482" d="M198.3 228.233a20.711 20.711 0 0 1 12.339 7.175" class="prefix__cls-1" data-name="Path 4482" transform="translate(-174.926 -228.233)"/>
+        <path id="prefix__Path_4483" d="M182.4 306.016v7.165a3.609 3.609 0 0 0 3.849 3.307h6.994a3.609 3.609 0 0 0 3.849-3.307v-7.165" class="prefix__cls-1" data-name="Path 4483" transform="translate(-169.988 -252.387)"/>
+        <path id="prefix__Path_4484" d="M187.984 321.2a2.587 2.587 0 0 0 2.587 2.588h1.82a2.587 2.587 0 0 0 2.587-2.588" class="prefix__cls-1" data-name="Path 4484" transform="translate(-171.722 -257.103)"/>
+    </g>
+</svg>
