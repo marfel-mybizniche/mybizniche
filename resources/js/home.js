@@ -114,7 +114,7 @@ ScrollTrigger.matchMedia({
             pin: true,
             start: "top -20%",
             end: "100% bottom",
-            //markers: true,
+            // markers: true,
             //scrub: 1
             onEnter() {
                introMbnTL.play();
@@ -135,24 +135,35 @@ ScrollTrigger.matchMedia({
          }
       });
       let introMbnTL = gsap.timeline({paused: true});
+      
+
       introMbnTL.to(".si-2a, .si-2b, .si-p", {opacity:0}, "-=1");     
       introMbnTL.to(".si-1m", {top:0});
       introMbnTL.to(".si-h6", {opacity:0}, "-=.5");
       introMbnTL.to(".si-1b", {top:0, left:"-12.15vw"}, "-=.5");
-      introMbnTL.to(".si-1n", {left:"-23.4vw", bottom:"-14.1vh"}, "-=.5");
+     // introMbnTL.to(".si-h1", {width:"95%"}, "-=.5");
+      introMbnTL.to(".si-1n", {left:"-23.4vw", bottom:"-14vh"}, "-=.5");
+      //introMbnTL.to(".si-h1", {width:"95%"}, "-=.5");
       introMbnTL.to(".start-side", {opacity:1});
       introMbnTL.to(".si-h1", {opacity:0, visibility:"hidden"}, "-=.5");
+
+      introMbnTL.to(".scroll .line", {height:20}, "-=.5");
+      introMbnTL.to(".scroll .circle .big", {scale:0.1}, "-=.5");
+
       introMbnTL.to(".start-side .text li", {duration:.5, fontSize:"3.5vw"}, "+=.5");
+      //introMbnTL.to(".si-1n", {position: "static"});
       
       //introMbnTL.to(".scroll .line", {height:180});
       //introMbnTL.to(".scroll .circle .big", {scale:1}, "-=.2");
             
       introMbnTL.from(".si-copy p", {opacity:0, marginTop:50}, "-=.5");
-      introMbnTL.from(".si-copy h2", {opacity:0, position:"relative", top: 100, display: "none"}, "-=.5");
+      introMbnTL.from(".si-copy h2", {opacity:0, position:"relative", top: 100, display: "none"}, "-=.4");
       introMbnTL.to(".si-copy", {top:"20%"}, "-=.5");
-      introMbnTL.from(".si-copy h3", {opacity:0, position:"relative", top: 50, display: "none"}, "-=.5");
+      introMbnTL.from(".si-copy h3", {opacity:0, position:"relative", top: 50, display: "none"}, "-=.3");
       introMbnTL.to(".start-side .link", {opacity:1});
       introMbnTL.from(".start-side .link", {marginTop:100}, "-=.5");
+
+      introMbnTL.to(".scroll .line", {height:120});
 
       
       let introRoiTrigger = gsap.timeline({
@@ -162,7 +173,7 @@ ScrollTrigger.matchMedia({
             pin: true,
             start: "top 40%",
             end: "100% 100%",
-            markers: true,
+            // markers: true,
             //toggleActions: "play reset reset reset",
             //scrub: 1
             onEnter() {
@@ -187,6 +198,10 @@ ScrollTrigger.matchMedia({
       introRoiTL.to(".si-ball", {duration:.5, y:"100vh"}, "-=.5");
       introRoiTL.to(".si-copy p, .si-copy h2", {opacity:0}, "-=.5");
       introRoiTL.to(".si-hat .sih-i1", {opacity:0}, "-=.5");
+
+      introRoiTL.to(".scroll .line", {height:180}, "-=.5");
+      introRoiTL.to(".scroll .circle .big", {scale:1}, "-=.2");
+
       introRoiTL.from(".si-roi .rb1", {duration:.2, height:0}, "-=.2");
       introRoiTL.from(".si-roi .rb2", {duration:.2, height:0});
       introRoiTL.from(".si-roi .rb3", {duration:.2, height:0});
@@ -194,6 +209,11 @@ ScrollTrigger.matchMedia({
       introRoiTL.from(".your-roi", {duration:1, top:100}, "-=.5");
       introRoiTL.from(".si-roi .glitz", {duration:.2, opacity:0}, "-=.4");  
       introRoiTL.to(".roi-hat .rh1", {bottom:-20}, "-=.4");
+      
+
+      
+      introRoiTL.to(".scroll .line", {height:40});
+      introRoiTL.to(".scroll .circle .big", {scale:0.1}, "-=.2");
 
       
       let marketersScrollTo = gsap.timeline({paused: true});
@@ -206,9 +226,7 @@ ScrollTrigger.matchMedia({
          end: "30% 100%",
          scrub: 5,
          onEnter() {
-            marketersScrollTo.play();
-            introMbnTL.kill(true);
-            introRoiTL.kill(true);            
+            marketersScrollTo.play();         
          },
          onEnterBack() {
             marketersScrollTo.pause(0);
@@ -230,11 +248,8 @@ ScrollTrigger.matchMedia({
       sideMbnTL.from(".sec-marketers .body", {ease: "back", y: 300, opacity:0, duration:1});
       sideMbnTL.from(".sec-marketers .team", {ease: "back", y: 300, opacity:0, duration:1});
       sideMbnTL.from(".sec-marketers .buttons", {opacity:0, duration:1});
-
       
-      
-      
-      let markTL = gsap.timeline({
+      let marketersTrigger = gsap.timeline({
          scrollTrigger: {
             trigger: ".sec-marketers",
             pin: true,
@@ -245,195 +260,166 @@ ScrollTrigger.matchMedia({
       });
       
       //find dark background
-      markTL.to("#wrapper", { className: "dark-bg"}, "+=1");
+      marketersTrigger.to("#wrapper", { className: "dark-bg"}, "+=1");
+     
+      
+      let wwwSec1TL = gsap.timeline({paused: true});
+      wwwSec1TL.to(window, {duration: 1, scrollTo: "#sec-www"});
 
-      // markTL.to(".start-side", {display:"none"} );
-      // markTL.from(".sec-marketers .title", {opacity:0, duration:.2}, "-=.4");
-      // markTL.from(".sec-marketers .body", {ease: "back", y: 300, opacity:0});
-      // markTL.from(".sec-marketers .team", {ease: "back", y: 300, opacity:0}, "-=.4" );
-      
-      // markTL.to(".sec-marketers .sm-bg1", {opacity:0}, "+=.2");
-      // markTL.to(".sec-marketers .sm-bg2", {opacity:0}, "+=.5");
-      // markTL.to(".sec-marketers .sm-bg2", {opacity:0});
-      
-      
-      let scrollTL44 = gsap.timeline({paused: true});
-      scrollTL44.to(window, {duration: 1, scrollTo: "#sec-www"});
-
-      let scrollTL44x = gsap.timeline({
+      let wwwSec1Trigger = gsap.timeline({
          scrollTrigger: {
             trigger: ".sec-www",
             start: "top 98%",
             end: "30% 100%",
             scrub: 5,
-            markers: true,
+            // markers: true,
             onEnter() {
-               scrollTL44.play();
+               wwwSec1TL.play();
             },
             onEnterBack() {
-               scrollTL44.pause(0);
+               wwwSec1TL.pause(0);
             },
          }
       });
       //find dark background
-      scrollTL44x.to("#wrapper", { className: "dark-bg"}, "+=5");
+      wwwSec1Trigger.to("#wrapper", { className: "dark-bg"}, "+=5");
 
-      //scrollTL44x.from(".sec-www .bg", {scale:1.2, transformOrigin:"center"});
-      scrollTL44x.from(".sec-www .tp1-w .w2", {marginLeft:0, duration:.5}, "-=.2");
-      scrollTL44x.from(".sec-www .tp1-w .w3", {marginLeft:0, duration:.5}, "-=.5");
-      // scrollTL44x.to(".sec-www .bg", {scale:1.2}, "-=.5");
+      //wwwSec1Trigger.from(".sec-www .bg", {scale:1.2, transformOrigin:"center"});
+      wwwSec1Trigger.from(".sec-www .tp1-w .w2", {marginLeft:0, duration:.5}, "-=.2");
+      wwwSec1Trigger.from(".sec-www .tp1-w .w3", {marginLeft:0, duration:.5}, "-=.5");
+      // wwwSec1Trigger.to(".sec-www .bg", {scale:1.2}, "-=.5");
       
-      scrollTL44x.from(".sec-www .tp1-h", {opacity:0});
-      scrollTL44x.from(".sec-www .tp1-h a", {height:110, width:110, lineHeight:"110px", duration:.2}, "-=.5");
+      wwwSec1Trigger.from(".sec-www .tp1-h", {opacity:0});
+      wwwSec1Trigger.from(".sec-www .tp1-h a", {height:110, width:110, lineHeight:"110px", duration:.2}, "-=.5");
       
-      scrollTL44x.to(".sec-www .tp1-wrap", {right:"auto",  left: 100,  transform: "scale(.3) rotate(-90deg)",  top: "50%"});
-      // scrollTL44x.to(".sec-www .bg", {scale:1}, "-=.5");
+      wwwSec1Trigger.to(".sec-www .tp1-wrap", {right:"auto",  left: 100,  transform: "scale(.3) rotate(-90deg)",  top: "50%"});
+      // wwwSec1Trigger.to(".sec-www .bg", {scale:1}, "-=.5");
       
-      scrollTL44x.to(".sec-www .www-p1", {width:170, minWidth:1, zIndex:50});
+      wwwSec1Trigger.to(".sec-www .www-p1", {width:170, minWidth:1, zIndex:50});
 
       //Portfolio
-      scrollTL44x.from(".www-p2 .port-1", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.5");
-      scrollTL44x.from(".www-p2 .port-2", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      scrollTL44x.from(".www-p2 .port-3", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      scrollTL44x.from(".www-p2 .port-4", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      scrollTL44x.from(".www-p2 .port-5", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1Trigger.from(".www-p2 .port-1", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.5");
+      wwwSec1Trigger.from(".www-p2 .port-2", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1Trigger.from(".www-p2 .port-3", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1Trigger.from(".www-p2 .port-4", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1Trigger.from(".www-p2 .port-5", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
 
       
-      scrollTL44x.from(".www-p2 .scrollbar", {opacity:0, y: 200, ease: "power2"}, "-=.4");
+      wwwSec1Trigger.from(".www-p2 .scrollbar", {opacity:0, y: 200, ease: "power2"}, "-=.4");
       
 
+      
+      let wwwSecTL = gsap.timeline({paused: true});
+      wwwSecTL.to(window, {duration: 1, scrollTo: "#www-p3"});
 
-      let wwwTL = gsap.timeline({
-         scrollTrigger: {
-            trigger: ".www-mob1",
-            pin: true,
-            start: "top top",
-            end: "100% top",
-            scrub: 1
-         }
-      });
-
-      // //find dark background
-      // wwwTL.to("#wrapper", { className: "dark-bg"});
-
-      // wwwTL.from(".sec-www .bg", {scale:1.2, transformOrigin:"center"});
-      // wwwTL.from(".sec-www .tp1-w .w2", {marginLeft:0, duration:.5}, "-=.2");
-      // wwwTL.from(".sec-www .tp1-w .w3", {marginLeft:0, duration:.5}, "-=.5");
-      // wwwTL.to(".sec-www .bg", {scale:1.2}, "-=.5");
-      
-      // wwwTL.from(".sec-www .tp1-h", {opacity:0});
-      // wwwTL.from(".sec-www .tp1-h a", {height:110, width:110, lineHeight:"110px", duration:.2}, "-=.5");
-      
-      // wwwTL.to(".sec-www .tp1-wrap", {right:"auto",  left: 100,  transform: "scale(.3) rotate(-90deg)",  top: "50%"});
-      // wwwTL.to(".sec-www .bg", {scale:1}, "-=.5");
-      
-      // wwwTL.to(".sec-www .www-p1", {width:170, minWidth:1, zIndex:50});
-     
-      
-      // //Portfolio
-      // wwwTL.from(".www-p2 .port-1", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.5");
-      // wwwTL.from(".www-p2 .port-2", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      // wwwTL.from(".www-p2 .port-3", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      // wwwTL.from(".www-p2 .port-4", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      // wwwTL.from(".www-p2 .port-5", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      
-      // wwwTL.to(".www-p2 .port-wrap ul", {x:-450, ease:"back"}, "+=.5");
-      // wwwTL.to(".www-p2 .port-1", {opacity:0}, "-=.5");
-      // wwwTL.to(".www-p2 .port-wrap ul", {x:-900, ease:"back"}, "+=.5");
-      // wwwTL.to(".www-p2 .port-2", {opacity:0}, "-=.5");
-      // wwwTL.to(".www-p2", {opacity:1}, "+=.5");
-      
-     // wwwTL.from(".sec-www .www-p3", {top:"100%", bottom:"-100%", duration:.3});
-
-      
-      let scrollTL55 = gsap.timeline({paused: true});
-      scrollTL55.to(window, {duration: 1, scrollTo: "#www-p3"});
-
-      let scrollTL55x = gsap.timeline({
+      let wwwSec2Trigger = gsap.timeline({
          scrollTrigger: {
             trigger: ".www-p3",
             start: "top 98%",
             end: "30% 100%",
             scrub: 2,
-            markers: true,
+            // markers: true,
             onEnter() {
-               scrollTL55.play();
+               wwwSecTL.play();
             },
             onEnterBack() {
-               scrollTL55.pause(0);
+               wwwSecTL.pause(0);
             },
          }
       });
+
       //Remove class
-      scrollTL55x.to("#wrapper", { className: "light-bg"}, "-=.2");
+      wwwSec2Trigger.to("#wrapper", { className: "light-bg"}, "-=.2");
 
-     // scrollTL55x.to(".sec-www .www-p2", {top:"-100%", bottom: "100%", opacity:.5}, "-=.5");
-
-
-      //scrollTL55x.to(".sec-www .www-p2", {display:"none"}, "-=.5");  
-      scrollTL55x.from(".www-p3 .title", {opacity:0}, "-=.2");
-      scrollTL55x.to(".www-p3 .title span", {opacity:1});
-      scrollTL55x.from(".www-p3 .desc", {opacity:0, top:100}, "-=.5");
+      wwwSec2Trigger.from(".www-p3 .title", {opacity:0}, "-=.2");
+      wwwSec2Trigger.to(".www-p3 .title span", {opacity:1});
+      wwwSec2Trigger.from(".www-p3 .desc", {opacity:0, top:100}, "-=.5");
       
-      /////scrollTL55x.to(".sec-www .www-p3", {top:"-20%", bottom:"20%"});
-      //scrollTL55x.to(".sec-www .www-p4", {top:"50%"}, "-=.5");
+      /////wwwSec2Trigger.to(".sec-www .www-p3", {top:"-20%", bottom:"20%"});
+      //wwwSec2Trigger.to(".sec-www .www-p4", {top:"50%"}, "-=.5");
 
-      scrollTL55x.from(".sec-www .wright hr", {opacity:0}, "-=.5");
-      scrollTL55x.from(".www-p3 .wquote", {opacity:0, left:-100, duration:.3});
+      wwwSec2Trigger.from(".sec-www .wright hr", {opacity:0}, "-=.5");
+      wwwSec2Trigger.from(".www-p3 .wquote", {opacity:0, left:-100, duration:.3});
 
 
       let scrollTL66 = gsap.timeline({paused: true});
       scrollTL66.to(window, {duration: 1, scrollTo: "#www-p4", offsetY:200});
       scrollTL66.to(".sec-www .www-p3 .wleft", {top:"85vh"}, "-=.5");
-      scrollTL66.to(".sec-www .www-p3 .wright", {top:"85vh"}, "-=.5");
+      scrollTL66.to(".sec-www .www-p3 .wright", {top:"88vh"}, "-=.5");
       scrollTL66.to(".sec-www .www-p3 .title", {fontSize:40}, "-=.5");
 
 
 
-      // let scrollTL66x = gsap.timeline({
-      //    scrollTrigger: {
-      //       trigger: ".www-p4",
-      //       start: "top 98%",
-      //       end: "30% 100%",
-      //       scrub: 5,
-      //       markers: true,
-      //       onEnter() {
-      //          scrollTL66.play();
-      //       },
-      //       onEnterBack() {
-      //          scrollTL66.pause(0);
-      //       },
-      //    }
-      // });
+      let scrollTL66x = gsap.timeline({
+         scrollTrigger: {
+            trigger: ".www-p4",
+            start: "top 98%",
+            end: "30% 100%",
+            scrub: 5,
+            // markers: true,
+            onEnter() {
+               scrollTL66.play();
+            },
+            onEnterBack() {
+               scrollTL66.pause(0);
+            },
+         }
+      });
+
+      let scrollTL66xxx = gsap.timeline({
+         scrollTrigger: {
+            trigger: ".www-p4 .pointer",
+            start: "top 10%",
+            end: "bottom bottom",
+            scrub: 1,
+            //markers: true
+         }
+      });
+      scrollTL66xxx.to("#wrapper", { className: "dark-bg"});
 
       
       let featTL = gsap.timeline({
          scrollTrigger: {
             trigger: ".sec-featin",
-            pin: true,
-            start: "top top",
-            end: "120% top",
-            scrub: 1
-         }
-      });
-      
-      //find dark background
-      featTL.to("#wrapper", { className: "dark-bg"});
-      
-      
-      let servTL = gsap.timeline({
-         scrollTrigger: {
-            trigger: ".sec-services",
-            pin: true,
+            //pin: true,
             start: "top top",
             end: "100% top",
-            scrub: 1
+            scrub: 1,
+            onEnter() {
+               servTL.play();
+            },
+            onEnterBack() {
+               servTL.pause(0);
+            },
+         }
+      });
+      
+      //find dark background
+      featTL.to("#wrapper", { className: ""});
+      
+      
+      let servTrigger = gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-services",
+            //pin: true,
+            start: "top top",
+            end: "100% top",
+            scrub: 1,
+            onEnter() {
+               servTL2.play();
+            },
+            onEnterBack() {
+               servTL2.pause(0);
+            },
          }
       });
 
-      //find dark background
-      servTL.to("#wrapper", { className: ""});
+      let servTL = gsap.timeline({paused: true});
 
+      //find dark background
+      servTL.to("#wrapper", { className: ""}, "-=.5");
+
+   
       servTL.from(".sr-t2 hr.red", {left: -200, bottom: -300, duration:.1});
       servTL.from(".sr-t2 .sr-h2", {left: -100, top: 100, opacity:0, duration:.2});
       servTL.from(".sr-t2 .sr-do", {opacity:0, scale:.8, ease: "back", duration:.1});
@@ -443,10 +429,12 @@ ScrollTrigger.matchMedia({
       servTL.to(".sr-t2 .sr-mbn span", {opacity:1});
       servTL.from(".sr-t2 hr.grey", {opacity:0, right: 0, x:60, y: -140}, "-=.5");
       
-      servTL.from(".sr-t1", {opacity:0, y: -50});
-      servTL.from(".sr-t2 .btn-custom", {opacity:0}, "-=.5");
-      servTL.from(".sr-menu", {opacity:0}, "-=.5");
-      servTL.from(".sr-menu ul", {y:20}, "-=.1");
+
+      let servTL2 = gsap.timeline({paused: true});
+      servTL2.from(".sr-t1", {opacity:0, y: -50});
+      servTL2.from(".sr-t2 .btn-custom", {opacity:0}, "-=.5");
+      servTL2.from(".sr-menu", {opacity:0}, "-=.5");
+      servTL2.from(".sr-menu ul", {y:20}, "-=.1");
 
       //Hide Header on scroll
       let hideHeader = gsap.timeline({
@@ -487,7 +475,7 @@ ScrollTrigger.matchMedia({
             start: "top top",
             end: "400% top",
             scrub: 1,
-            //markers: true,
+            // markers: true,
             //endTrigger: ".start-mojo",
             //toggleActions: "restart pause resume pause"
          }

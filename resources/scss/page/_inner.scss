@@ -5,11 +5,25 @@
 
 
 // COntact page
-.page-template-contact .hsnav-s7.is-stuck {
-    position: fixed;
-    background: rgba($color-white, 0.8);
-    box-shadow: 0 0 15px rgba($color-black,0.1);
+.page-template-contact {
+    .hsnav-s7 {
+        &.is-stuck {
+            position: fixed;
+            background: rgba($color-white, 0.8);
+            box-shadow: 0 0 15px rgba($color-black,0.1);
+        }
+    }
+    
+
+    @media(max-width:1023px) {
+        .hsnav-s7 {
+            background: rgba($color-white, 0.8);
+            box-shadow: 0 0 15px rgba($color-black,0.1);
+        }
+                
+    }
 }
+
 .sec-contact {
     padding: 180px 0 50px;
 

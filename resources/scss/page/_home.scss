@@ -4,8 +4,34 @@ body.intro-active {
     margin-right: 17px;
 }
 
-.grid-container {
-    //max-width: 75vw;
+.home {
+    .grid-container {
+        max-width: 75vw;
+    
+        @media(max-width:1599px) {
+            max-width: 1200px;
+        }
+
+        @media(max-width:1023px) {
+            max-width: none;
+        }
+    }
+
+    @media(max-width:1440px) {
+        #header {
+            .hsnav-s7 {
+                background: rgba($color-white, 0.8);
+            }
+        }  
+        .dark-bg {
+            #header {
+                .hsnav-s7 {
+                    background: rgba($color-black, 0.3);
+                }
+            }
+                    
+        }
+    }
 }
 
 #content {
@@ -221,7 +247,7 @@ body.intro-active {
         }
     }
 
-    @include media(max-width, 1024px) {
+    @media(max-width: 1024px) {
         //display: none;
     }
 }
@@ -325,7 +351,8 @@ body.intro-active {
                 padding:0;
                 a {
                     position: relative;
-                    font-size: 15px;
+                   // font-size: 15px;
+                    font-size: .75vw;
                     font-weight: bold;
                     letter-spacing: 1.5px;
                     color: $color-dark;
@@ -390,7 +417,7 @@ body.intro-active {
             }
         }
 
-        @include media(max-width, 1600px) {
+        @media(max-width: 1600px) {
             ul.text {
                 li {
                     //font-size: 90px;
@@ -398,12 +425,12 @@ body.intro-active {
             }
         }
 
-        @include media(max-width, 1023px) {
+        @media(max-width: 1023px) {
             left: 30px;
             right: 30px;
         }
 
-        @include media(max-width, 767px) {
+        @media(max-width: 767px) {
             opacity: 0;
             
             .ss-h6 {
@@ -441,7 +468,7 @@ body.intro-active {
             }
         }
 
-        @include media(max-width, 413px) {
+        @media(max-width: 413px) {
             left: 15px;
             right: 15px;
 
@@ -558,6 +585,7 @@ body.intro-active {
             line-height: 1;
             position: relative;
             color: $color-dark;
+            //width: 95%;
             
             transition: all 1s ease;
             
@@ -584,7 +612,7 @@ body.intro-active {
                 position: relative;
             }
         }
-        @include media(max-width, 1600px) {
+        @media(max-width: 1600px) {
             //font-size: 18px;
 
             .si-wrap {
@@ -597,7 +625,11 @@ body.intro-active {
 
         }
 
-        @include media(max-width, 767px) {
+        @media(min-width: 1024px) and (max-width: 1280px) {
+            
+        }
+
+        @media(max-width: 767px) {
             font-size: 14px;
 
             .si-wrap {
@@ -613,7 +645,7 @@ body.intro-active {
             }
 
         }
-        @include media(max-width, 767px) {
+        @media(max-width: 767px) {
             .si-wrap {
                 top:30%
             }
@@ -632,12 +664,12 @@ body.intro-active {
             width: 500px;
             max-width: 100%;
 
-            @include media(max-width, 767px) {
+            @media(max-width: 767px) {
                 width: 290px;
                 left: 45%;
             }
 
-            @include media(max-width, 413px) {
+            @media(max-width: 413px) {
                 width: 210px;
                 left: 45%;
             }
@@ -710,7 +742,7 @@ body.intro-active {
                 color: $color-dark;
             }
   
-            @include media(max-width, 1600px) {
+            @media(max-width: 1600px) {
 
                 // h2 {
                 //     font-size: 55px;
@@ -726,7 +758,7 @@ body.intro-active {
             }
             
   
-            @include media(max-width, 1280px) {
+            @media(max-width: 1280px) {
 
                 // h2 {
                 //     font-size: 48px;
@@ -742,7 +774,7 @@ body.intro-active {
                 // }        
             }
             
-            @include media(max-width, 767px) {
+            @media(max-width: 767px) {
 
                 top:40%;
                 
@@ -772,7 +804,7 @@ body.intro-active {
                 
             }
             
-            @include media(max-width, 413px) {
+            @media(max-width: 413px) {
 
                 p.large {
                     font-size: 26px;
@@ -801,7 +833,7 @@ body.intro-active {
               margin-bottom: -190px;  
             }
 
-            @include media(max-width, 1600px) {
+            @media(max-width: 1600px) {
                 // width: 400px;
                 // left: 48%;
 
@@ -810,7 +842,7 @@ body.intro-active {
                 // }       
             }
 
-            @include media(max-width, 1023px) {
+            @media(max-width: 1023px) {
                 display: none;
             }
         }
@@ -907,7 +939,7 @@ body.intro-active {
                     top: 77px;
                     z-index: 3;
 
-                    max-width: 20vw;
+                    width: 20vw;
                     left: -1.1vw;
                     top: 4vw;
                 }
@@ -957,7 +989,7 @@ body.intro-active {
                 }
             }
 
-            @include media(max-width, 1600px) {
+            @media(max-width: 1600px) {
                 .roi-boxs {
                     //padding-left: 60px;
                 }    
@@ -993,7 +1025,7 @@ body.intro-active {
                 //     }
                 // }
             }
-            @include media(max-width, 1366px) {
+            @media(max-width: 1366px) {
                 left: 50%;
                 right: auto;
                 width: 980px;
@@ -1001,7 +1033,7 @@ body.intro-active {
                 transform: translate(-50%, 0);
             }
             
-            @include media(max-width, 1023px) {
+            @media(max-width: 1023px) {
                 top: 40%;
                 bottom: 0;
                 min-height: 600px;
@@ -1068,7 +1100,7 @@ body.intro-active {
                 }
             }
             
-            @include media(max-width, 767px) {
+            @media(max-width: 767px) {
                 .roi-box {
                     width: 100%;
                     height: 100% !important;
@@ -1107,7 +1139,7 @@ body.intro-active {
 
             }
             
-            @include media(max-width, 413px) {
+            @media(max-width: 413px) {
 
                 .your-roi {
                     h3 {
@@ -1379,7 +1411,7 @@ body.intro-active {
         }
     }
 
-    @include media(max-width, 1600px) {
+    @media(max-width: 1600px) {
         //padding-top: 120px;
 
         // .copy {
@@ -1393,7 +1425,7 @@ body.intro-active {
         // }
     }
     
-    @include media(max-width, 1440px) {
+    @media(max-width: 1440px) {
         // .team {
 
         //     ul {
@@ -1402,7 +1434,7 @@ body.intro-active {
         // }
     }
 
-    @include media(max-width, 1023px) {
+    @media(max-width: 1023px) {
         .copy {
             width: 450px;
         }
@@ -1427,7 +1459,7 @@ body.intro-active {
         }
     }
 
-    @include media(max-width, 767px) {
+    @media(max-width: 767px) {
         
         .copy {
             width: 450px;
@@ -1579,7 +1611,7 @@ body.intro-active {
         }
     }
 
-    @include media(max-width, 1600px) {
+    @media(max-width: 1600px) {
         // .tp1-w {
         //     font-size: 230px;
 
@@ -1602,7 +1634,7 @@ body.intro-active {
         // }
     }
 
-    @include media(max-width, 1023px) {
+    @media(max-width: 1023px) {
         .tp1-w {
             font-size: 200px;
 
@@ -1631,7 +1663,7 @@ body.intro-active {
 
         
 
-        @include media(max-width, 767px) {
+        @media(max-width: 767px) {
             position: absolute;
         }
     }
@@ -1671,16 +1703,16 @@ body.intro-active {
         }
 
         .port-wrap {
-            margin-right: calc((-100vw - -#{$grid-container}) / 2);
+            margin-right: calc((-100vw - -75vw) / 2);
             position: absolute;
             top: 50%;
             left: 0;
             right: 0;
-            transform: translate(0, -50%);
+            transform: translate(0, -50%); 
         }
 
         ul {
-            margin: 0;
+            margin: 0 -20px;
             padding:0;
             //display: flex;
             //width: 2240px;
@@ -1689,10 +1721,11 @@ body.intro-active {
                 list-style: none;
                 //width: 450px;
                 //margin: 0 15px;
-                width: 22.4vw;
+                width: 22vw;
                 padding: 0 .7vw;
                 flex: 1;
                 float: left;
+                margin-right: -2px;
             }
         }
 
@@ -1719,7 +1752,7 @@ body.intro-active {
             }
         }
 
-        @include media(max-width, 1600px) {
+        @media(max-width: 1599px) {
             // .port-wrap {
             //     left: 130px;
 
@@ -1733,10 +1766,14 @@ body.intro-active {
             // .port-item {
             //     font-size: 16px;
             // }
+
+            .port-scroller {
+                padding-left: 50px;
+            }
         }
         
 
-        @include media(max-width, 1023px) {
+        @media(max-width: 1023px) {
             .port-wrap {
                 left: 25%;
 
@@ -1749,7 +1786,7 @@ body.intro-active {
         }
         
 
-        @include media(max-width, 767px) {
+        @media(max-width: 767px) {
             position: relative;
 
             .port-wrap {
@@ -1769,7 +1806,7 @@ body.intro-active {
         }
         
 
-        @include media(max-width, 767px) {
+        @media(max-width: 767px) {
 
             .port-wrap {
                 top:430px;
@@ -1909,7 +1946,7 @@ body.intro-active {
             }
         }
 
-        @include media(max-width, 1600px) {
+        @media(max-width: 1600px) {
             // .title {
             //     font-size: 120px;
             // }
@@ -1922,7 +1959,7 @@ body.intro-active {
             // }
         }
 
-        @include media(max-width, 1023px) {
+        @media(max-width: 1023px) {
 
             .wleft {
                 left: 130px;
@@ -1933,7 +1970,7 @@ body.intro-active {
             }
         }
 
-        @include media(max-width, 767px) {
+        @media(max-width: 767px) {
             position: relative;
             top: auto;
             padding: 210px 0 50px;
@@ -1975,7 +2012,7 @@ body.intro-active {
             }
         }
 
-        @include media(max-width, 639px) {
+        @media(max-width: 639px) {
             .title {
                 font-size: 24px;
             }
@@ -2078,7 +2115,7 @@ body.intro-active {
             }
         }
         
-        @include media(max-width, 1600px) {
+        @media(max-width: 1600px) {
             // .pointer {
             //     left: 130px;
             //     border-width: 30px;
@@ -2089,7 +2126,7 @@ body.intro-active {
             // }
         }
 
-        @include media(max-width, 1023px) {
+        @media(max-width: 1023px) {
             padding: 100px 0 60px;
             
             .pointer {
@@ -2102,7 +2139,7 @@ body.intro-active {
             }
         }
 
-        @include media(max-width, 767px) {
+        @media(max-width: 767px) {
             position: relative;
             top: auto;
             bottom: auto;
@@ -2158,7 +2195,7 @@ body.intro-active {
         }
     }
     
-    @include media(max-width, 1366px) {
+    @media(max-width: 1366px) {
         .title {
             font-size: 15px;
             letter-spacing: 2px;
@@ -2173,7 +2210,7 @@ body.intro-active {
 
     }
     
-    @include media(max-width, 1023px) {
+    @media(max-width: 1023px) {
         margin-top: 0;
         .feat-wrap {
             padding: 60px 0;
@@ -2189,7 +2226,7 @@ body.intro-active {
         }
     }
     
-    @include media(max-width, 639px) {
+    @media(max-width: 639px) {
         padding: 90px 0 0;
         
         &:before {
@@ -2353,7 +2390,7 @@ body.intro-active {
             }
         }
         
-        @include media(max-width, 1600px) {
+        @media(max-width: 1600px) {
             // .sr-h2 {
             //     font-size: 70px;
             // }
@@ -2378,7 +2415,7 @@ body.intro-active {
             // }
         }
 
-        @include media(max-width, 1366px) {
+        @media(max-width: 1366px) {
             .sr-h2 {
                 font-size: 60px;
             }
@@ -2408,7 +2445,7 @@ body.intro-active {
         }
 
 
-        @include media(max-width, 1023px) {
+        @media(max-width: 1023px) {
             min-width: 1px;
             padding-top:20%;
 
@@ -2439,7 +2476,7 @@ body.intro-active {
         }
         
         
-        @include media(max-width, 767px) {
+        @media(max-width: 767px) {
             padding-top: 30%;
             padding-bottom: 0;
 
@@ -2534,7 +2571,7 @@ body.intro-active {
             }
         }
         
-        @include media(max-width, 1366px) {
+        @media(max-width: 1366px) {
             ul {
                 ul {
                     li {
@@ -2546,7 +2583,7 @@ body.intro-active {
             }
         }
         
-        @include media(max-width, 1023px) {
+        @media(max-width: 1023px) {
             ul {
                 display: block;
                 column-count: 2;
@@ -2573,7 +2610,7 @@ body.intro-active {
             }
         }
         
-        @include media(max-width, 639px) {
+        @media(max-width: 639px) {
             padding:70px 0;
 
             ul {
@@ -2644,7 +2681,7 @@ body.intro-active {
 
     }
     
-    @include media(max-width, 1023px) { 
+    @media(max-width: 1023px) { 
         ul {
             li {
 
@@ -2659,7 +2696,7 @@ body.intro-active {
     }
     
     
-    @include media(max-width, 639px) { 
+    @media(max-width: 639px) { 
         ul {
             li {
                 padding: 25px;
@@ -2746,7 +2783,7 @@ body.intro-active {
     }
 
     
-    @include media(max-width, 1023px) {
+    @media(max-width: 1023px) {
         .line {
             .circle {
                 .big {
@@ -2759,7 +2796,7 @@ body.intro-active {
         }
     }
     
-    @include media(max-width, 767px) {
+    @media(max-width: 767px) {
         right: 30px;
 
         .line {
