@@ -99,7 +99,7 @@ get_header(); ?>
         </div>
 
 
-        <div id="marketers" class="sec-marketers section">
+        <div id="marketers" class="sec-marketers">
             <div class="bg-list">
                 <figure class="sm-bg1">
                     <img class="show-for-large" src="<?php echo MBN_ASSETS_URI ?>/img/img-marketers-1.jpg" alt="">
@@ -140,149 +140,147 @@ get_header(); ?>
             </div>
         </div> 
 
-        <div id="sec-www" class="sec-www xside-active">
+        <div id="sec-www" class="sec-www">
             <div class="spacer"></div>
-            <!-- <div class="www-mob1"> -->
-                <div class="bg fixed">
-                    <img src="<?php echo MBN_ASSETS_URI ?>/img/img-www.jpg" alt="">
-                </div>
-                
-                <div id="www-p1" class="www-p1">
-                    <div class="tp1-wrap">
-                        <div class="tp1-w">
-                            <span class="w1">W</span>
-                            <span class="w2">W</span>
-                            <span class="w3">W</span>
-                        </div>
-                        <h2 class="tp1-h">we <a href="">do</a> winning work.</h2>
-                    </div>
-                </div>
 
-                <div id="www-p2" class="www-p2 section">
-                    <div class="grid-container">
-                        <div class="port-scroller">
-                            <div class="port-wrap">
-                                <ul>
-                                    <li class="port-1">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-asu-feat.jpg" alt=""></figure>
-                                            <h6 data-port="01">ASU</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li class="port-2">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-mathnasium-feat.jpg" alt=""></figure>
-                                            <h6 data-port="02">Mathnasium</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li class="port-3">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-pacific-legal-feat.jpg" alt=""></figure>
-                                            <h6 data-port="03">Pacifical Legal</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li  class="port-4">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-tgi-fridays-feat.jpg" alt=""></figure>
-                                            <h6 data-port="04">TGI Fridays</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li  class="port-5">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-boulder-feat.jpg" alt=""></figure>
-                                            <h6 data-port="05">Boulder</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li class="port-1">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-asu-feat.jpg" alt=""></figure>
-                                            <h6 data-port="01">ASU</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li class="port-2">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-mathnasium-feat.jpg" alt=""></figure>
-                                            <h6 data-port="02">Mathnasium</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li class="port-3">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-pacific-legal-feat.jpg" alt=""></figure>
-                                            <h6 data-port="03">Pacifical Legal</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li  class="port-4">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-tgi-fridays-feat.jpg" alt=""></figure>
-                                            <h6 data-port="04">TGI Fridays</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li  class="port-5">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-boulder-feat.jpg" alt=""></figure>
-                                            <h6 data-port="05">Boulder</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li class="port-1">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-asu-feat.jpg" alt=""></figure>
-                                            <h6 data-port="01">ASU</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li class="port-2">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-mathnasium-feat.jpg" alt=""></figure>
-                                            <h6 data-port="02">Mathnasium</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li class="port-3">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-pacific-legal-feat.jpg" alt=""></figure>
-                                            <h6 data-port="03">Pacifical Legal</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li  class="port-4">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-tgi-fridays-feat.jpg" alt=""></figure>
-                                            <h6 data-port="04">TGI Fridays</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    <li  class="port-5">
-                                        <div class="port-item">
-                                            <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-boulder-feat.jpg" alt=""></figure>
-                                            <h6 data-port="05">Boulder</h6>
-                                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                        </div>
-                                    </li>
-                                    
-                                </ul>
-                            </div>
-                            <!-- <div class="pages"></div> -->
-                            <div class="scrollbar">
-                                <div class="handle">
-                                    <div class="mousearea"></div>
-                                </div>
+            <div class="bg fixed" id="scrollbar">
+                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-www.jpg" alt="">
+            </div>
+            
+            <div id="www-p1" class="www-p1">
+                <div class="tp1-wrap">
+                    <div class="tp1-w">
+                        <span class="w1">W</span>
+                        <span class="w2">W</span>
+                        <span class="w3">W</span>
+                    </div>
+                    <h2 class="tp1-h">we <a href="">do</a> winning work.</h2>
+                </div>
+            </div>
+
+            <div id="www-p2" class="www-p2">
+                <div class="grid-container">
+                    <div class="port-scroller">
+                        <div class="port-wrap">
+                            <ul>
+                                <li class="port-1">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-asu-feat.jpg" alt=""></figure>
+                                        <h6 data-port="01">ASU</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li class="port-2">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-mathnasium-feat.jpg" alt=""></figure>
+                                        <h6 data-port="02">Mathnasium</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li class="port-3">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-pacific-legal-feat.jpg" alt=""></figure>
+                                        <h6 data-port="03">Pacifical Legal</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li  class="port-4">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-tgi-fridays-feat.jpg" alt=""></figure>
+                                        <h6 data-port="04">TGI Fridays</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li  class="port-5">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-boulder-feat.jpg" alt=""></figure>
+                                        <h6 data-port="05">Boulder</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li class="port-1">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-asu-feat.jpg" alt=""></figure>
+                                        <h6 data-port="01">ASU</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li class="port-2">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-mathnasium-feat.jpg" alt=""></figure>
+                                        <h6 data-port="02">Mathnasium</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li class="port-3">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-pacific-legal-feat.jpg" alt=""></figure>
+                                        <h6 data-port="03">Pacifical Legal</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li  class="port-4">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-tgi-fridays-feat.jpg" alt=""></figure>
+                                        <h6 data-port="04">TGI Fridays</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li  class="port-5">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-boulder-feat.jpg" alt=""></figure>
+                                        <h6 data-port="05">Boulder</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li class="port-1">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-asu-feat.jpg" alt=""></figure>
+                                        <h6 data-port="01">ASU</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li class="port-2">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-mathnasium-feat.jpg" alt=""></figure>
+                                        <h6 data-port="02">Mathnasium</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li class="port-3">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-pacific-legal-feat.jpg" alt=""></figure>
+                                        <h6 data-port="03">Pacifical Legal</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li  class="port-4">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-tgi-fridays-feat.jpg" alt=""></figure>
+                                        <h6 data-port="04">TGI Fridays</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li  class="port-5">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-boulder-feat.jpg" alt=""></figure>
+                                        <h6 data-port="05">Boulder</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <!-- <div class="pages"></div> -->
+                        <div class="scrollbar">
+                            <div class="handle">
+                                <div class="mousearea"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            <!-- </div> -->
-            
-            <!-- <div class="www-mob2"> -->
+            </div>
+
             <div class="www-p3" id="www-p3">   
                 
                 <div class="tp1-wrap hide-for-medium">
@@ -316,7 +314,7 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="www-p4" >
+            <div class="www-p4">
                 <span id="www-p4"></span>
                 <div class="grid-container">
                     <span class="pointer"></span>
@@ -428,11 +426,10 @@ get_header(); ?>
                     </ul>
                 </div>
             </div>
-            <!-- </div> -->
             
         </div>
 
-        <div class="sec-featin section">
+        <div id="featin" class="sec-featin">
             <div class="feat-wrap">
                 <div class="grid-container">
                     <h5 class="title"><b>m</b>entioned <em>by</em> <b>b</b>ig <b>n</b>ames.</h5>

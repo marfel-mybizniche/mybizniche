@@ -68,8 +68,11 @@ $(document).foundation();
 
            $('html, body').animate({
               scrollTop: $(this.hash || $('a', this)[0].hash).offset().top
-           }, { duration: 1000 });
+           }, { duration: 5000 });
+
+           
            return false;
+           
         });
      },
      

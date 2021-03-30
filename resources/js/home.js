@@ -104,28 +104,39 @@ ScrollTrigger.matchMedia({
             pin: true,
             start: "top top",
             end: "150% top",
-            scrub: 1
+            scrub: 1,
+            onEnterBack() {
+               $('#wrapper').removeClass('dark-bg');
+               $('#wrapper').addClass('light-bg');
+            }
          }
       });
+      
+      //find dark background
+      pageLoadTrigger.to("#wrapper", { className: "light-bg"}, "-=1");
 
       let introMBNTrigger = gsap.timeline({
          scrollTrigger: {
             trigger: ".start-trigger .st-1",
             pin: true,
-            start: "top -20%",
-            end: "100% bottom",
+            start: "top -10%",
+            end: "150% bottom",
             // markers: true,
-            //scrub: 1
+            scrub: 1,
             onEnter() {
                introMbnTL.play();
+               introRoiTL.pause(0);
              },
              onEnterBack() {
                introMbnTL.pause(0);
-               introMbnTL.play();
+               introMbnTL.kill();
+               introRoiTL.pause(0);
+               introRoiTL.kill();
+               introMbnTLEB.play();
              },
              onLeave(){ },
              onLeaveBack(){ 
-               introMbnTL.pause(0);
+               //introMbnTL.pause(0);
             },
             
             // onEnter: () => introMbnTL.play(),
@@ -136,35 +147,28 @@ ScrollTrigger.matchMedia({
       });
       let introMbnTL = gsap.timeline({paused: true});
       
-
       introMbnTL.to(".si-2a, .si-2b, .si-p", {opacity:0}, "-=1");     
-      introMbnTL.to(".si-1m", {top:0});
+      introMbnTL.to(".si-1m", {top:0}, "-=.2");
       introMbnTL.to(".si-h6", {opacity:0}, "-=.5");
       introMbnTL.to(".si-1b", {top:0, left:"-12.15vw"}, "-=.5");
-     // introMbnTL.to(".si-h1", {width:"95%"}, "-=.5");
       introMbnTL.to(".si-1n", {left:"-23.4vw", bottom:"-14vh"}, "-=.5");
-      //introMbnTL.to(".si-h1", {width:"95%"}, "-=.5");
       introMbnTL.to(".start-side", {opacity:1});
       introMbnTL.to(".si-h1", {opacity:0, visibility:"hidden"}, "-=.5");
-
       introMbnTL.to(".scroll .line", {height:20}, "-=.5");
       introMbnTL.to(".scroll .circle .big", {scale:0.1}, "-=.5");
-
       introMbnTL.to(".start-side .text li", {duration:.5, fontSize:"3.5vw"}, "+=.5");
-      //introMbnTL.to(".si-1n", {position: "static"});
-      
-      //introMbnTL.to(".scroll .line", {height:180});
-      //introMbnTL.to(".scroll .circle .big", {scale:1}, "-=.2");
-            
       introMbnTL.from(".si-copy p", {opacity:0, marginTop:50}, "-=.5");
       introMbnTL.from(".si-copy h2", {opacity:0, position:"relative", top: 100, display: "none"}, "-=.4");
       introMbnTL.to(".si-copy", {top:"20%"}, "-=.5");
       introMbnTL.from(".si-copy h3", {opacity:0, position:"relative", top: 50, display: "none"}, "-=.3");
       introMbnTL.to(".start-side .link", {opacity:1});
       introMbnTL.from(".start-side .link", {marginTop:100}, "-=.5");
-
       introMbnTL.to(".scroll .line", {height:120});
 
+      
+      let introMbnTLEB = gsap.timeline({paused: true});
+      introMbnTLEB.to(".si-copy p", {opacity:0, marginTop:0}, "-=.5");
+      
       
       let introRoiTrigger = gsap.timeline({
          //paused: true,
@@ -172,23 +176,22 @@ ScrollTrigger.matchMedia({
             trigger: ".start-trigger .st-2",
             pin: true,
             start: "top 40%",
-            end: "100% 100%",
+            end: "150% bottom",
             // markers: true,
             //toggleActions: "play reset reset reset",
-            //scrub: 1
+            scrub: 1,
             onEnter() {
                introRoiTL.play();
              },
              onEnterBack() {
                introRoiTL.pause(0);
-               introRoiTL.play();
+               //introRoiTL.play();
              },
              onLeaveBack() {
-               introRoiTL.pause(0);
+               //introRoiTL.pause(0);
              }
          }
       });
-   
       
       let introRoiTL = gsap.timeline({paused: true});
       introRoiTL.to(".si-ball", {duration:1, y:"100vh"});
@@ -207,13 +210,12 @@ ScrollTrigger.matchMedia({
       introRoiTL.from(".si-roi .rb3", {duration:.2, height:0});
       introRoiTL.to(".si-copy", {duration:.5, top:"-50%"}, "-=.4");
       introRoiTL.from(".your-roi", {duration:1, top:100}, "-=.5");
+      introRoiTL.from(".roi-hat .rh1", {opacity:0}, "-=.4");
       introRoiTL.from(".si-roi .glitz", {duration:.2, opacity:0}, "-=.4");  
       introRoiTL.to(".roi-hat .rh1", {bottom:-20}, "-=.4");
-      
-
-      
       introRoiTL.to(".scroll .line", {height:40});
       introRoiTL.to(".scroll .circle .big", {scale:0.1}, "-=.2");
+      introRoiTL.to(".your-roi .glitz", {opacity:0}, "-=.3");
 
       
       let marketersScrollTo = gsap.timeline({paused: true});
@@ -222,11 +224,12 @@ ScrollTrigger.matchMedia({
       let sideMbnTL = gsap.timeline({
       scrollTrigger: {
          trigger: ".sec-marketers",
-         start: "top 100%",
+         start: "top 98%",
          end: "30% 100%",
-         scrub: 5,
+         scrub: 1,
+         markers: true,
          onEnter() {
-            marketersScrollTo.play();         
+            marketersScrollTo.play();   
          },
          onEnterBack() {
             marketersScrollTo.pause(0);
@@ -234,7 +237,7 @@ ScrollTrigger.matchMedia({
       }
       });
       //sideMbnTL.to(".ss-h6", {display:"none"});
-      sideMbnTL.to(".start-side .text li span", {opacity:0}, "-=1");
+      sideMbnTL.to(".start-side .text li span", {opacity:0});
       sideMbnTL.to(".start-side .link", {top:-600, duration:2, opacity:0}, "-=.2");
       sideMbnTL.to(".start-side .text .tm", {fontSize:"3.5vw"}, "-=.2");
       sideMbnTL.to(".start-side .text .tb", {fontSize:"3.5vw"}, "-=.2");
@@ -242,37 +245,38 @@ ScrollTrigger.matchMedia({
       sideMbnTL.to(".start-side ", {top: "21vh"}, "+=1");
 
       sideMbnTL.to("#wrapper", { className: "dark-bg"});
+
+      let xsideMbnTL = gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-marketers",
+            start: "top top",
+            end: "30% 100%",
+            scrub: 1,
+            markers: true,
+            onEnter() {
+               xsideMbnTLx.play();   
+            },
+            onEnterBack() {
+               xsideMbnTLx.pause(0);
+            },
+         }
+         });
+         let xsideMbnTLx = gsap.timeline({paused: true}); 
       
-      sideMbnTL.from(".sec-marketers .title", {opacity:0, duration:1});
-      sideMbnTL.to(".start-side", {display:"none"}, "-=1");
-      sideMbnTL.from(".sec-marketers .body", {ease: "back", y: 300, opacity:0, duration:1});
-      sideMbnTL.from(".sec-marketers .team", {ease: "back", y: 300, opacity:0, duration:1});
-      sideMbnTL.from(".sec-marketers .buttons", {opacity:0, duration:1});
+      xsideMbnTLx.from(".sec-marketers .title", {opacity:0}, "=-.5");
+      xsideMbnTLx.to(".start-side", {display:"none"}, "-=.5");
+      xsideMbnTLx.from(".sec-marketers .body", {ease: "back", y: 300, opacity:0});
+      xsideMbnTLx.from(".sec-marketers .team", {ease: "back", y: 300, opacity:0});
+      xsideMbnTLx.from(".sec-marketers .buttons", {opacity:0});
       
+
       let marketersTrigger = gsap.timeline({
          scrollTrigger: {
             trigger: ".sec-marketers",
             pin: true,
             start: "top top",
             end: "100% top",
-            scrub: 1
-         }
-      });
-      
-      //find dark background
-      marketersTrigger.to("#wrapper", { className: "dark-bg"}, "+=1");
-     
-      
-      let wwwSec1TL = gsap.timeline({paused: true});
-      wwwSec1TL.to(window, {duration: 1, scrollTo: "#sec-www"});
-
-      let wwwSec1Trigger = gsap.timeline({
-         scrollTrigger: {
-            trigger: ".sec-www",
-            start: "top 98%",
-            end: "30% 100%",
-            scrub: 5,
-            // markers: true,
+            scrub: 1,
             onEnter() {
                wwwSec1TL.play();
             },
@@ -281,31 +285,36 @@ ScrollTrigger.matchMedia({
             },
          }
       });
+         
+      
+      let wwwSec1TL = gsap.timeline({paused: true});
+      wwwSec1TL.to(window, {duration: 1, scrollTo: "#sec-www"});
+      
       //find dark background
-      wwwSec1Trigger.to("#wrapper", { className: "dark-bg"}, "+=5");
+      wwwSec1TL.to("#wrapper", { className: "dark-bg"});
 
-      //wwwSec1Trigger.from(".sec-www .bg", {scale:1.2, transformOrigin:"center"});
-      wwwSec1Trigger.from(".sec-www .tp1-w .w2", {marginLeft:0, duration:.5}, "-=.2");
-      wwwSec1Trigger.from(".sec-www .tp1-w .w3", {marginLeft:0, duration:.5}, "-=.5");
-      // wwwSec1Trigger.to(".sec-www .bg", {scale:1.2}, "-=.5");
+      //wwwSec1TL.from(".sec-www .bg", {scale:1.2, transformOrigin:"center"});
+      wwwSec1TL.from(".sec-www .tp1-w .w2", {marginLeft:0, duration:.5}, "-=.5");
+      wwwSec1TL.from(".sec-www .tp1-w .w3", {marginLeft:0, duration:.5}, "-=.5");
+      // wwwSec1TL.to(".sec-www .bg", {scale:1.2}, "-=.5");
       
-      wwwSec1Trigger.from(".sec-www .tp1-h", {opacity:0});
-      wwwSec1Trigger.from(".sec-www .tp1-h a", {height:110, width:110, lineHeight:"110px", duration:.2}, "-=.5");
+      wwwSec1TL.from(".sec-www .tp1-h", {opacity:0});
+      wwwSec1TL.from(".sec-www .tp1-h a", {height:110, width:110, lineHeight:"110px", duration:.2}, "-=.5");
       
-      wwwSec1Trigger.to(".sec-www .tp1-wrap", {right:"auto",  left: 100,  transform: "scale(.3) rotate(-90deg)",  top: "50%"});
-      // wwwSec1Trigger.to(".sec-www .bg", {scale:1}, "-=.5");
+      wwwSec1TL.to(".sec-www .tp1-wrap", {right:"auto",  left: 100,  transform: "scale(.3) rotate(-90deg)",  top: "50%"});
+      // wwwSec1TL.to(".sec-www .bg", {scale:1}, "-=.5");
       
-      wwwSec1Trigger.to(".sec-www .www-p1", {width:170, minWidth:1, zIndex:50});
+      wwwSec1TL.to(".sec-www .www-p1", {width:170, minWidth:1, zIndex:50});
 
       //Portfolio
-      wwwSec1Trigger.from(".www-p2 .port-1", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.5");
-      wwwSec1Trigger.from(".www-p2 .port-2", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      wwwSec1Trigger.from(".www-p2 .port-3", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      wwwSec1Trigger.from(".www-p2 .port-4", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      wwwSec1Trigger.from(".www-p2 .port-5", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1TL.from(".www-p2 .port-1", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.5");
+      wwwSec1TL.from(".www-p2 .port-2", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1TL.from(".www-p2 .port-3", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1TL.from(".www-p2 .port-4", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1TL.from(".www-p2 .port-5", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
 
       
-      wwwSec1Trigger.from(".www-p2 .scrollbar", {opacity:0, y: 200, ease: "power2"}, "-=.4");
+      wwwSec1TL.from(".www-p2 .scrollbar", {opacity:0, y: 200, ease: "power2"}, "-=.4");
       
 
       
@@ -418,9 +427,7 @@ ScrollTrigger.matchMedia({
 
       //find dark background
       servTL.to("#wrapper", { className: ""}, "-=.5");
-
-   
-      servTL.from(".sr-t2 hr.red", {left: -200, bottom: -300, duration:.1});
+      servTL.from(".sr-t2 hr.red", {left: -200, bottom: -300, duration:.1}, "-=.5");
       servTL.from(".sr-t2 .sr-h2", {left: -100, top: 100, opacity:0, duration:.2});
       servTL.from(".sr-t2 .sr-do", {opacity:0, scale:.8, ease: "back", duration:.1});
       servTL.from(".sr-t2 .sr-m", {top:-100, opacity:0, duration:.2});
@@ -428,11 +435,11 @@ ScrollTrigger.matchMedia({
       servTL.from(".sr-t2 .sr-n", {top:100, opacity:0, duration:.2}, "-=.2");
       servTL.to(".sr-t2 .sr-mbn span", {opacity:1});
       servTL.from(".sr-t2 hr.grey", {opacity:0, right: 0, x:60, y: -140}, "-=.5");
+      servTL.from(".sr-t1", {opacity:0, y: -50}, "-=.5");
+      servTL.from(".sr-t2 .btn-custom", {opacity:0}, "-=.5");
       
 
       let servTL2 = gsap.timeline({paused: true});
-      servTL2.from(".sr-t1", {opacity:0, y: -50});
-      servTL2.from(".sr-t2 .btn-custom", {opacity:0}, "-=.5");
       servTL2.from(".sr-menu", {opacity:0}, "-=.5");
       servTL2.from(".sr-menu ul", {y:20}, "-=.1");
 
@@ -707,5 +714,10 @@ jQuery(function(){
 			clickBar: 1,
 
 		});
+
+      sly.on('load', function (eventName) {
+         console.log(eventName); // 'load'
+         console.log(this.pos);  // Sly position object
+      });
 })
 
