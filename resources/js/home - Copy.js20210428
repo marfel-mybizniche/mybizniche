@@ -98,105 +98,104 @@ ScrollTrigger.matchMedia({
    "(min-width: 1024px)": function() {
     
       
-      const sections = document.querySelectorAll(".panel");
-
-         function goToSection(section, anim) {
-         gsap.to(window, {
-            scrollTo: {y: section, autoKill: false},
-            duration: 1
-         });
-         
-         anim && anim.restart();
-         }
-
-         sections.forEach(section => {
-         const intoAnim = gsap.from(section.querySelector(".right-col"), {yPercent: 50, duration: 2, paused: true});
-         
-         ScrollTrigger.create({
-            trigger: section,
-            end: "bottom top+=1",
-            //scrub: 5,
-            onEnter: () => goToSection(section),
-            onEnterBack: () => goToSection(section)
-         });
-         
-      
-      });
-
-      let introMBNTrigger1 = gsap.timeline({
+      let pageLoadTrigger = gsap.timeline({
          scrollTrigger: {
-            trigger: ".trigger-1",
-            onEnter() {
-               introMbnTL.pause(0);
-               introMbnTL.pause(0);
-             },
-             onEnterBack() {
-               introMbnTL.pause(0);
-               //introRoiTL.pause(0);
-             }
+            trigger: ".start-intro",
+            pin: true,
+            start: "top top",
+            end: "150% top",
+            scrub: 1,
+            onEnterBack() {
+               $('#wrapper').removeClass('dark-bg');
+               $('#wrapper').addClass('light-bg');
+            }
          }
       });
+      
+      //find dark background
+      pageLoadTrigger.to("#wrapper", { className: "light-bg"}, "-=1");
 
       let introMBNTrigger = gsap.timeline({
          scrollTrigger: {
-            trigger: ".trigger-2",
+            trigger: ".start-trigger .st-1",
+            pin: true,
+            start: "top -10%",
+            end: "150% bottom",
+            // markers: true,
+            scrub: 1,
             onEnter() {
-               introMbnTL.pause(0);
                introMbnTL.play();
+               introRoiTL.pause(0);
              },
              onEnterBack() {
-               //introMbnTL.pause(0);
+               introMbnTL.pause(0);
+               introMbnTL.kill();
                introRoiTL.pause(0);
-             }
+               introRoiTL.kill();
+               introMbnTLEB.play();
+             },
+             onLeave(){ },
+             onLeaveBack(){ 
+               //introMbnTL.pause(0);
+            },
+            
+            // onEnter: () => introMbnTL.play(),
+            // onLeave: () => introMbnTL.kill(true),
+            // onEnterBack: () => introMbnTL.pause(0),
+            // onLeaveBack: () => introMbnTL.kill(true)
          }
       });
       let introMbnTL = gsap.timeline({paused: true});
       
       introMbnTL.to(".si-2a, .si-2b, .si-p", {opacity:0}, "-=1");     
-      introMbnTL.to(".si-1m", {top:0}, "-=1");
-      introMbnTL.to(".si-1b", {top:0, left:"-12.15vw"}, "-=1");
-      introMbnTL.to(".si-1n", {left:"-23.4vw", bottom:"-14vh"}, "-=1");
-      introMbnTL.to(".si-h6", {opacity:0}, "-=1");
-      introMbnTL.to(".start-side", {opacity:1}, "-=.5");
+      introMbnTL.to(".si-1m", {top:0}, "-=.2");
+      introMbnTL.to(".si-h6", {opacity:0}, "-=.5");
+      introMbnTL.to(".si-1b", {top:0, left:"-12.15vw"}, "-=.5");
+      introMbnTL.to(".si-1n", {left:"-23.4vw", bottom:"-14vh"}, "-=.5");
+      introMbnTL.to(".start-side", {opacity:1});
       introMbnTL.to(".si-h1", {opacity:0, visibility:"hidden"}, "-=.5");
-
       introMbnTL.to(".scroll .line", {height:20}, "-=.5");
       introMbnTL.to(".scroll .circle .big", {scale:0.1}, "-=.5");
-      
       introMbnTL.to(".start-side .text li", {fontSize:"3.5vw"}, "+=.5");
       introMbnTL.from(".si-copy p", {opacity:0, marginTop:50}, "-=.5");
-      introMbnTL.from(".si-copy h2", {opacity:0, position:"relative", top: 100, display: "none"}, "-=.4");
+      introMbnTL.from(".si-copy h2", {opacity:0, position:"relative", top: 100, display: "none"}, "-=.5");
       introMbnTL.to(".si-copy", {top:"20%"}, "-=.5");
       introMbnTL.from(".si-copy h3", {opacity:0, position:"relative", top: 50, display: "none"}, "-=.3");
-
       introMbnTL.to(".start-side .link", {opacity:1});
       introMbnTL.from(".start-side .link", {marginTop:100}, "-=.5");
       introMbnTL.to(".scroll .line", {height:120});
 
+      
+      let introMbnTLEB = gsap.timeline({paused: true});
+      introMbnTLEB.to(".si-copy p", {opacity:0, marginTop:0}, "-=.5");
+      
+      
       let introRoiTrigger = gsap.timeline({
          //paused: true,
          scrollTrigger: {
-            trigger: ".trigger-3",
+            trigger: ".start-trigger .st-2",
+            pin: true,
+            start: "top 30%",
+            end: "150% bottom",
+            // markers: true,
+            //toggleActions: "play reset reset reset",
+            scrub: 3,
             onEnter() {
-               gsap.timeline().to("#wrapper", { className: "light-bg"});
-               introRoiTL.pause(0);
                introRoiTL.play();
              },
              onEnterBack() {
-               gsap.timeline().to("#wrapper", { className: "light-bg"});
-              // introRoiTL.pause(0);
-               wwwSec1TL.pause(0);
-               gsap.timeline().from(".si-roi", { opacity: 0}, "+=.5");
-               playWork.pause(0);   
-               
+               introRoiTL.pause(0);
+               //introRoiTL.play();
+             },
+             onLeaveBack() {
+               //introRoiTL.pause(0);
              }
          }
       });
       
       let introRoiTL = gsap.timeline({paused: true});
-      
       introRoiTL.to(".si-ball", {duration:1, y:"100vh"});
-      introRoiTL.to(".si-copy", {duration:.5, opacity:0}, "-=1");
+      introRoiTL.to(".si-copy h3, .si-copy p,.si-copy .si-we, .si-copy .si-it", {duration:.5, opacity:0}, "-=1");
       introRoiTL.from(".roi-bot", {bottom:-500}, "-=1");
       introRoiTL.from(".si-hat .sih-i1", {opacity:0, duration:1, y:100, ease: "back"}, "-=.5");
       introRoiTL.to(".si-ball", {duration:.5, y:"100vh"}, "-=.5");
@@ -218,118 +217,138 @@ ScrollTrigger.matchMedia({
       introRoiTL.to(".scroll .circle .big", {scale:0.1}, "-=.2");
       introRoiTL.to(".your-roi .glitz", {opacity:0}, "-=.3");
 
+      
+      let marketersScrollTo = gsap.timeline({paused: true});
+      marketersScrollTo.to(window, {duration: 1, scrollTo: "#marketers"});     
+      
+      let sideMbnTL = gsap.timeline({
+      scrollTrigger: {
+         trigger: ".sec-marketers",
+         start: "top 98%",
+         end: "30% 100%",
+         scrub: 1,
+         markers: true,
+         onEnter() {
+            marketersScrollTo.play();   
+         },
+         onEnterBack() {
+            marketersScrollTo.pause(0);
+         },
+      }
+      });
+      //sideMbnTL.to(".ss-h6", {display:"none"});
+      sideMbnTL.to(".start-side .text li span", {opacity:0});
+      sideMbnTL.to(".start-side .link", {top:-600, duration:2, opacity:0}, "-=.2");
+      sideMbnTL.to(".start-side .text .tm", {fontSize:"3.5vw"}, "-=.2");
+      sideMbnTL.to(".start-side .text .tb", {fontSize:"3.5vw"}, "-=.2");
+      sideMbnTL.to(".start-side .text .tn", {fontSize:"3.5vw", top:"-3.5vw", left:"5vw"}, "-=.5");
+      sideMbnTL.to(".start-side ", {top: "21vh"}, "+=1");
 
+      sideMbnTL.to("#wrapper", { className: "dark-bg"});
+
+      let xsideMbnTL = gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-marketers",
+            start: "top top",
+            end: "30% 100%",
+            scrub: 1,
+            markers: true,
+            onEnter() {
+               xsideMbnTLx.play();   
+            },
+            onEnterBack() {
+               xsideMbnTLx.pause(0);
+            },
+         }
+         });
+         let xsideMbnTLx = gsap.timeline({paused: true}); 
+      
+      xsideMbnTLx.from(".sec-marketers .title", {opacity:0}, "=-.5");
+      xsideMbnTLx.to(".start-side", {display:"none"}, "-=.5");
+      xsideMbnTLx.from(".sec-marketers .body", {ease: "back", y: 300, opacity:0});
+      xsideMbnTLx.from(".sec-marketers .team", {ease: "back", y: 300, opacity:0});
+      xsideMbnTLx.from(".sec-marketers .buttons", {opacity:0});
+      
 
       let marketersTrigger = gsap.timeline({
          scrollTrigger: {
             trigger: ".sec-marketers",
+            pin: true,
+            start: "top top",
+            end: "100% top",
+            scrub: 1,
             onEnter() {
-               gsap.timeline().to("#wrapper", {className: "dark-bg"}, "+=.5");
-               wwwSec1TL.pause(0);
                wwwSec1TL.play();
             },
             onEnterBack() {
-               gsap.timeline().to("#wrapper", {className: "dark-bg"}, "+=.5");
-              // wwwSec1TL.pause(0);
-               //playWork.pause(0);   
+               wwwSec1TL.pause(0);
             },
          }
       });
-
-      let wwwSec1TL = gsap.timeline({paused: true});
-      
-      wwwSec1TL.to(".start-intro", {opacity:0}, "-=1");
-      wwwSec1TL.to(".start-side .text li span", {opacity:0}, "-=1");
-      wwwSec1TL.to(".start-side .text .tn", {fontSize:"3.5vw", top:"-3.5vw", left:"5vw"}, "-=.5");
-      wwwSec1TL.to(".start-side .link", {top:-600, opacity:0}, "-=.5");
-      wwwSec1TL.to(".start-side .text .tm", {fontSize:"3.5vw"}, "-=.5");
-      wwwSec1TL.to(".start-side .text .tb", {fontSize:"3.5vw"}, "-=.5");
-      wwwSec1TL.to(".start-side ", {top: "21vh"}, "+=.5");
-
-      wwwSec1TL.from(".sec-marketers .title", {opacity:0}, "=-1");
-      wwwSec1TL.to(".start-side", {display: "none"}, "-=.5");
-      wwwSec1TL.from(".sec-marketers .body", {ease: "back", y: 300, opacity:0}, "-=.5");
-      wwwSec1TL.from(".sec-marketers .team", {ease: "back", y: 300, opacity:0}), "-=.5";
-      wwwSec1TL.from(".sec-marketers .buttons", {opacity:0}, "-=.5");
-      wwwSec1TL.to(".sec-start", {visibility:"hidden"});
-      
          
       
+      let wwwSec1TL = gsap.timeline({paused: true});
+      wwwSec1TL.to(window, {duration: 1, scrollTo: "#sec-www"});
       
       //find dark background
-      //wwwSec1TL.to("#wrapper", { className: "dark-bg"});
+      wwwSec1TL.to("#wrapper", { className: "dark-bg"});
 
-
-      let wwwWork = gsap.timeline({
-         //paused: true,
-         scrollTrigger: {
-            trigger: ".sec-www .trigger-1",
-            onEnter() {
-               gsap.timeline().to("#wrapper", { className: "dark-bg"});
-               playWork.play();
-            },
-            onEnterBack() {  
-               gsap.timeline().to("#wrapper", { className: "dark-bg"});
-              //playWork.pause(0);             
-            }
-         }
-      });
-
-      let playWork = gsap.timeline({paused: true});
+      //wwwSec1TL.from(".sec-www .bg", {scale:1.2, transformOrigin:"center"});
+      wwwSec1TL.from(".sec-www .tp1-w .w2", {marginLeft:0, duration:.5}, "-=.5");
+      wwwSec1TL.from(".sec-www .tp1-w .w3", {marginLeft:0, duration:.5}, "-=.5");
+      // wwwSec1TL.to(".sec-www .bg", {scale:1.2}, "-=.5");
       
-      playWork.to(".www-work", {opacity:1}, "+=1");
-      playWork.from(".www-work", {marginTop:200}, "-=.8");
-      //playWork.from(".sec-www .bg", {scale:1.2, transformOrigin:"center"});
-      playWork.from(".sec-www .tp1-w .w2", {marginLeft:0, duration:.5});
-      playWork.from(".sec-www .tp1-w .w3", {marginLeft:0, duration:.5}, "-=.5");
-      playWork.from(".sec-www .tp1-h", {opacity:0, duration:.2}, "-=.5");
-      playWork.from(".sec-www .tp1-h a", {height:100, width:100, lineHeight:"100px", duration:.2}, "-=.5");
-      // playWork.to(".sec-www .bg", {scale:1.2}, "-=.5");
+      wwwSec1TL.from(".sec-www .tp1-h", {opacity:0});
+      wwwSec1TL.from(".sec-www .tp1-h a", {height:110, width:110, lineHeight:"110px", duration:.2}, "-=.5");
       
-      playWork.to(".sec-www .tp1-wrap", {right:"auto",  left: 100,  transform: "scale(.3) rotate(-90deg)",  top: "50%"}, "+=.5");
-      playWork.to(".sec-www .www-p1", {width:170, minWidth:1, zIndex:50});
-
+      wwwSec1TL.to(".sec-www .tp1-wrap", {right:"auto",  left: 100,  transform: "scale(.3) rotate(-90deg)",  top: "50%"});
+      // wwwSec1TL.to(".sec-www .bg", {scale:1}, "-=.5");
+      
+      wwwSec1TL.to(".sec-www .www-p1", {width:170, minWidth:1, zIndex:50});
 
       //Portfolio
-      playWork.from(".www-p2 .port-1", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.5");
-      playWork.from(".www-p2 .port-2", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      playWork.from(".www-p2 .port-3", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      playWork.from(".www-p2 .port-4", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-      playWork.from(".www-p2 .port-5", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
-
-      playWork.from(".www-p2 .scrollbar", {opacity:0, y: 200, ease: "power2"}, "-=.4");
+      wwwSec1TL.from(".www-p2 .port-1", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.5");
+      wwwSec1TL.from(".www-p2 .port-2", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1TL.from(".www-p2 .port-3", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1TL.from(".www-p2 .port-4", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
+      wwwSec1TL.from(".www-p2 .port-5", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
 
       
-      //playWork.to(".sec-www .bg", {position:"fixed"});    
+      wwwSec1TL.from(".www-p2 .scrollbar", {opacity:0, y: 200, ease: "power2"}, "-=.4");
+      
 
+      
+      let wwwSecTL = gsap.timeline({paused: true});
+      wwwSecTL.to(window, {duration: 1, scrollTo: "#www-p3"});
 
-
-      let wwwMBN = gsap.timeline({
-         //paused: true,
+      let wwwSec2Trigger = gsap.timeline({
          scrollTrigger: {
-            trigger: ".sec-www .trigger-2",
+            trigger: ".www-p3",
+            start: "top 98%",
+            end: "30% 120%",
+            scrub: 2,
+            // markers: true,
             onEnter() {
-               gsap.timeline().to("#wrapper", { className: "light-bg"});
-               wwwMbnPlay.play();
+               wwwSecTL.play();
             },
-            onEnterBack() {  
-               //gsap.timeline().to("#wrapper", { className: "dark-bg"});
-              //playWork.pause(0);              
-            }
+            onEnterBack() {
+               wwwSecTL.pause(0);
+            },
          }
       });
 
-      
-      let wwwMbnPlay = gsap.timeline({paused: true});  
-      wwwMbnPlay.from(".www-p3 .title", {opacity:0}, "-=.2");
-      wwwMbnPlay.to(".www-p3 .title span", {opacity:1});
-      wwwMbnPlay.from(".www-p3 .desc", {opacity:0, top:100}, "-=.5");
-      
-      /////wwwMbnPlay.to(".sec-www .www-p3", {top:"-20%", bottom:"20%"});
-      //wwwMbnPlay.to(".sec-www .www-p4", {top:"50%"}, "-=.5");
+      //Remove class
+      wwwSec2Trigger.to("#wrapper", { className: "light-bg"}, "-=.2");
 
-      wwwMbnPlay.from(".sec-www .wright hr", {opacity:0}, "-=.5");
-      wwwMbnPlay.from(".www-p3 .wquote", {opacity:0, left:-100, duration:.3});
+      wwwSec2Trigger.from(".www-p3 .title", {opacity:0}, "-=.2");
+      wwwSec2Trigger.to(".www-p3 .title span", {opacity:1});
+      wwwSec2Trigger.from(".www-p3 .desc", {opacity:0, top:100}, "-=.5");
+      
+      /////wwwSec2Trigger.to(".sec-www .www-p3", {top:"-20%", bottom:"20%"});
+      //wwwSec2Trigger.to(".sec-www .www-p4", {top:"50%"}, "-=.5");
+
+      wwwSec2Trigger.from(".sec-www .wright hr", {opacity:0}, "-=.5");
+      wwwSec2Trigger.from(".www-p3 .wquote", {opacity:0, left:-100, duration:.3});
 
 
       let scrollTL66 = gsap.timeline({paused: true});
@@ -338,6 +357,112 @@ ScrollTrigger.matchMedia({
       scrollTL66.to(".sec-www .www-p3 .wright", {top:"88vh"}, "-=.5");
       scrollTL66.to(".sec-www .www-p3 .title", {fontSize:40}, "-=.5");
 
+
+
+      let scrollTL66x = gsap.timeline({
+         scrollTrigger: {
+            trigger: ".www-p4",
+            start: "top 98%",
+            end: "30% 100%",
+            scrub: 5,
+            // markers: true,
+            onEnter() {
+               scrollTL66.play();
+            },
+            onEnterBack() {
+               scrollTL66.pause(0);
+            },
+         }
+      });
+
+      let scrollTL66xxx = gsap.timeline({
+         scrollTrigger: {
+            trigger: ".www-p4 .pointer",
+            start: "top 10%",
+            end: "bottom bottom",
+            scrub: 1,
+            //markers: true
+         }
+      });
+      scrollTL66xxx.to("#wrapper", { className: "dark-bg"});
+
+      
+      let featTL = gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-featin",
+            //pin: true,
+            start: "top top",
+            end: "100% top",
+            scrub: 1,
+            onEnter() {
+               servTL.play();
+            },
+            onEnterBack() {
+               servTL.pause(0);
+            },
+         }
+      });
+      
+      //find dark background
+      featTL.to("#wrapper", { className: ""});
+      
+      
+      let servTrigger = gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-services",
+            //pin: true,
+            start: "top top",
+            end: "100% top",
+            scrub: 1,
+            onEnter() {
+               servTL2.play();
+            },
+            onEnterBack() {
+               servTL2.pause(0);
+            },
+         }
+      });
+
+      let servTL = gsap.timeline({paused: true});
+
+      //find dark background
+      servTL.to("#wrapper", { className: ""}, "-=.5");
+      servTL.from(".sr-t2 hr.red", {left: -200, bottom: -300, duration:.1}, "-=.5");
+      servTL.from(".sr-t2 .sr-h2", {left: -100, top: 100, opacity:0, duration:.2});
+      servTL.from(".sr-t2 .sr-do", {opacity:0, scale:.8, ease: "back", duration:.1});
+      servTL.from(".sr-t2 .sr-m", {top:-100, opacity:0, duration:.2});
+      servTL.from(".sr-t2 .sr-b", {left:300, opacity:0, duration:.2, ease:"back"}, "-=.2");
+      servTL.from(".sr-t2 .sr-n", {top:100, opacity:0, duration:.2}, "-=.2");
+      servTL.to(".sr-t2 .sr-mbn span", {opacity:1});
+      servTL.from(".sr-t2 hr.grey", {opacity:0, right: 0, x:60, y: -140}, "-=.5");
+      servTL.from(".sr-t1", {opacity:0, y: -50}, "-=.5");
+      servTL.from(".sr-t2 .btn-custom", {opacity:0}, "-=.5");
+      
+
+      let servTL2 = gsap.timeline({paused: true});
+      servTL2.from(".sr-menu", {opacity:0}, "-=.5");
+      servTL2.from(".sr-menu ul", {y:20}, "-=.1");
+
+      //Hide Header on scroll
+      let hideHeader = gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sr-menu",
+            start: "bottom top",
+            end: "+=105 top",
+            scrub: 1
+         }
+      });
+      hideHeader.to(".hsnav-s7", {top:-105});
+      
+      let scrollerTL = gsap.timeline({
+         scrollTrigger: {
+            trigger: "#footer",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1
+         }
+      });
+      scrollerTL.to(".scroll", {opacity:0, bottom:-250});
       
    },
 
@@ -586,6 +711,44 @@ jQuery('.skip-intro').click(function(){
 });
 
 jQuery(function(){
+   jQuery('.sec-marketers .bg-list').slick({
+      arrows: false,
+      fade: true,
+      autoplay: true
+   });
 
+
+
+   var $frame  = jQuery('.port-wrap');
+		var $slidee = $frame.children('ul').eq(0);
+		var $wrap   = $frame.parent();
+
+		// Call Sly on frame
+		$frame.sly({
+			horizontal: 1,
+			itemNav: 'basic',
+			smart: 1,
+			activateOn: 'click',
+			mouseDragging: 1,
+			touchDragging: 1,
+			releaseSwing: 1,
+			startAt: 0,
+			scrollBar: $wrap.find('.scrollbar'),
+			scrollBy: 1,
+			pagesBar: $wrap.find('.pages'),
+			activatePageOn: 'click',
+			speed: 300,
+			elasticBounds: 1,
+			easing: 'easeOutExpo',
+			dragHandle: 1,
+			dynamicHandle: 1,
+			clickBar: 1,
+
+		});
+
+      // sly.on('load', function (eventName) {
+      //    console.log(eventName); // 'load'
+      //    console.log(this.pos);  // Sly position object
+      // });
 })
 

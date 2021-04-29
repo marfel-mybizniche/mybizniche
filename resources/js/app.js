@@ -4,13 +4,14 @@ $(document).foundation();
 
    var app = {
        onReady: function(){
-         //app.niceScroll();
+         app.niceScroll();
        },	
        onLoad: function(){
         $(document).foundation();
 
         app.utils();
         app.smoothscroll();
+        app.homeScripts();
 
      },
 
@@ -19,8 +20,7 @@ $(document).foundation();
          jQuery("body").niceScroll({
             cursoropacitymin: 1,
             zindex: 9999,
-            //  scrollspeed: 50,
-            //  mousescrollstep: 10
+            scrollspeed: 10
          });
      },
 
@@ -75,8 +75,48 @@ $(document).foundation();
            
         });
      },
+
+     homeScripts: function(){
+
+      jQuery('.sec-marketers .bg-list').slick({
+         arrows: false,
+         fade: true,
+         autoplay: true,
+         autoplaySpeed: 2000
+      });
      
-     
+      var $frame  = jQuery('.port-wrap');
+         var $slidee = $frame.children('ul').eq(0);
+         var $wrap   = $frame.parent();
+   
+         // Call Sly on frame
+         $frame.sly({
+            horizontal: 1,
+            itemNav: 'basic',
+            smart: 1,
+            activateOn: 'mouseenter',
+            mouseDragging: 1,
+            touchDragging: 1,
+            releaseSwing: 1,
+            startAt: 0,
+            scrollBar: $wrap.find('.scrollbar'),
+            scrollBy: 1,
+            pagesBar: $wrap.find('.pages'),
+            activatePageOn: 'mouseenter',
+            speed: 300,
+            elasticBounds: 1,
+            easing: 'easeOutExpo',
+            dragHandle: 1,
+            dynamicHandle: 1,
+            clickBar: 1,
+   
+         });
+   
+         // sly.on('load', function (eventName) {
+         //    console.log(eventName); // 'load'
+         //    console.log(this.pos);  // Sly position object
+         // });
+     }
      
    }
 

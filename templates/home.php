@@ -6,100 +6,111 @@ get_header(); ?>
 
 <main id="content">
 
-        <div class="sec-start">
-            <div class="grid-container">
-                <aside class="start-side">
-                    <!-- <h6 class="ss-h6"><b>mbn</b> <em>stands for</em> my biz niche.</h6> -->
-                    <ul class="text">
-                        <li class="tm">m<span>ojo</span></li>
-                        <li class="tb">b<span>ehind</span></li>
-                        <li class="tn">n<span>ame</span></li>
-                    </ul>
-                    <ul class="link">
-                        <li><a href="">Get To Know Us</a></li>
-                        <li><a href="">View Case Studies</a></li>
-                    </ul> 
-                </aside> 
+        <style>
+            /* .sec-start.pofix  {z-index: 9999;} */
+        </style>
 
-                <div class="start-intro">
-                    <div class="si-wrap align-self-middle">
-                        <h6 class="si-h6"><span><b>mbn</b> <em>stands for</em> my biz niche.</span></h6>
-                        <h1 class="si-h1">
-                            <span class="si-1m">m</span><span class="si-2a"><b>arketing</b></span>
-                            <span class="si-2b"><i>is our</i></span>
-                            <span class="si-1b">b</span><span class="si-2a"><b>iz</b></span>
-                            <span class="si-1n">n</span><span class="si-2a"><b>iche.</b></span>
-                        </h1>
-                        <p class="si-p"><span>The team at My Biz Niche has ONE GOAL.  Only one. <br>To surpass your sales expectations.  We’re committed to helping you beat your competition and making your numbers.  Your numbers become our numbers.</span></p>
-                    </div>
-                    
-                    <!-- <div class="si-image">
-                            <img src="<?php echo MBN_ASSETS_URI ?>/img/img-magician.png" alt="">
-                    </div> -->
 
-                    <div class="si-copy grid-x">
-                        <div class="cell large-8 large-offset-3 xlarge-8 xlarge-offset-3">
-                            <p class="large">Every digital marketing company says their primary goal is to help businesses grow their revenue.</p>
-                            <h2><span class="si-we">we actually</span> <span class="si-do">do <i class="si-ball"></i></span> <span class="si-it">it.</span></h2>
-                            <h3>The essence of <i>what we do</i> is <b>ROI</b>.</h3>
+
+        <div class="sec-start pofix">
+
+            <div class="start-trigger">
+                <div class="panel trigger-1"></div>
+                <div class="panel trigger-2"></div>
+                <div class="panel trigger-3"></div>
+            </div>
+
+            <div class="start-wrap">
+                <div class="grid-container">
+
+                    <aside class="start-side">
+                        <!-- <h6 class="ss-h6"><b>mbn</b> <em>stands for</em> my biz niche.</h6> -->
+                        <ul class="text">
+                            <li class="tm">m<span>ojo</span></li>
+                            <li class="tb">b<span>ehind</span></li>
+                            <li class="tn">n<span>ame</span></li>
+                        </ul>
+                        <ul class="link">
+                            <li><a href="">Get To Know Us</a></li>
+                            <li><a href="">View Case Studies</a></li>
+                        </ul> 
+                    </aside> 
+
+
+                    <div class="start-intro">
+                        <div class="si-wrap align-self-middle">
+                            <h6 class="si-h6"><span><b>mbn</b> <em>stands for</em> my biz niche.</span></h6>
+                            <h1 class="si-h1">
+                                <span class="si-1m">m</span><span class="si-2a"><b>arketing</b></span>
+                                <span class="si-2b"><i>is our</i></span>
+                                <span class="si-1b">b</span><span class="si-2a"><b>iz</b></span>
+                                <span class="si-1n">n</span><span class="si-2a"><b>iche.</b></span>
+                            </h1>
+                            <p class="si-p"><span>The team at My Biz Niche has ONE GOAL.  Only one. <br>To surpass your sales expectations.  We’re committed to helping you beat your competition and making your numbers.  Your numbers become our numbers.</span></p>
                         </div>
-                    </div>
+                        
+                        <!-- <div class="si-image">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-magician.png" alt="">
+                        </div> -->
 
-                    <div class="si-hat">
-                        <span class="sih-i1"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-magic-glitz-red.png" alt=""></span>
-                        <!-- <span class="sih-i2"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-magician-hat.png" alt=""></span> -->
-                    </div>  
-
-
-                    <div class="si-roi">
-                        <div class="your-roi hide-for-large">
-                            <h3>The essence of <i>what we do</i> is <b>ROI</b>.</h3>
-                            <img class="dollar" src="<?php echo MBN_ASSETS_URI ?>/img/img-dollars.png" alt="">
-                            <h2><small>Your</small>   ROI</h2>
-                            <p>Simply put, we bring you more customers. 
-                                With only a month to month contract.</p>
-                            <img class="glitz" src="<?php echo MBN_ASSETS_URI ?>/img/img-magic-glitz-white.png" alt="">   
-                        </div> 
-                        <div class="grid-x grid-margin-x roi-boxs">
-                            <div class="cell small-4 align-self-bottom">
-                                <div class="roi-box rb1"></div>
+                        <div class="si-copy grid-x">
+                            <div class="cell large-8 large-offset-3 xlarge-8 xlarge-offset-3">
+                                <p class="large">Every digital marketing company says their primary goal is to help businesses grow their revenue.</p>
+                                <h2><span class="si-we">we actually</span> <span class="si-do">do <i class="si-ball"></i></span> <span class="si-it">it.</span></h2>
+                                <h3>The essence of <i>what we do</i> is <b>ROI</b>.</h3>
                             </div>
-                            <div class="cell small-4 align-self-bottom">
-                                <div class="roi-box rb2"></div>
-                            </div>
-                            <div class="cell small-4 align-self-bottom">   
-                                <div class="roi-box rb3">
-                                    <div class="your-roi show-for-large">
-                                        <img class="dollar" src="<?php echo MBN_ASSETS_URI ?>/img/img-dollars.png" alt="">
-                                        <h2><small>Your</small>   ROI</h2>
-                                        <p>Simply put, we bring you more customers. 
-                                            With only a month to month contract.</p>
-                                        <img class="glitz" src="<?php echo MBN_ASSETS_URI ?>/img/img-magic-glitz-white.png" alt="">   
-                                    </div> 
+                        </div>
+
+                        <div class="si-hat">
+                            <span class="sih-i1"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-magic-glitz-red.png" alt=""></span>
+                            <!-- <span class="sih-i2"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-magician-hat.png" alt=""></span> -->
+                        </div>  
+
+
+                        <div class="si-roi">
+                            <div class="your-roi hide-for-large">
+                                <h3>The essence of <i>what we do</i> is <b>ROI</b>.</h3>
+                                <img class="dollar" src="<?php echo MBN_ASSETS_URI ?>/img/img-dollars.png" alt="">
+                                <h2><small>Your</small>   ROI</h2>
+                                <p>Simply put, we bring you more customers. 
+                                    With only a month to month contract.</p>
+                                <img class="glitz" src="<?php echo MBN_ASSETS_URI ?>/img/img-magic-glitz-white.png" alt="">   
+                            </div> 
+                            <div class="grid-x grid-margin-x roi-boxs">
+                                <div class="cell small-4 align-self-bottom">
+                                    <div class="roi-box rb1"></div>
                                 </div>
-                            </div>    
-                        </div>
-                        <div class="roi-bot">
-                            <div class="roi-hat">
-                                <img class="rh1" src="<?php echo MBN_ASSETS_URI ?>/img/img-bunny-ears.png" alt="">
-                                <img class="rh2" src="<?php echo MBN_ASSETS_URI ?>/img/img-magician-hat.png" alt="">
+                                <div class="cell small-4 align-self-bottom">
+                                    <div class="roi-box rb2"></div>
+                                </div>
+                                <div class="cell small-4 align-self-bottom">   
+                                    <div class="roi-box rb3">
+                                        <div class="your-roi show-for-large">
+                                            <img class="dollar" src="<?php echo MBN_ASSETS_URI ?>/img/img-dollars.png" alt="">
+                                            <h2><small>Your</small>   ROI</h2>
+                                            <p>Simply put, we bring you more customers. 
+                                                With only a month to month contract.</p>
+                                            <img class="glitz" src="<?php echo MBN_ASSETS_URI ?>/img/img-magic-glitz-white.png" alt="">   
+                                        </div> 
+                                    </div>
+                                </div>    
+                            </div>
+                            <div class="roi-bot">
+                                <div class="roi-hat">
+                                    <img class="rh1" src="<?php echo MBN_ASSETS_URI ?>/img/img-bunny-ears.png" alt="">
+                                    <img class="rh2" src="<?php echo MBN_ASSETS_URI ?>/img/img-magician-hat.png" alt="">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-                </div>    
+                        
+                    </div>    
 
-                <div class="start-trigger">
-                    <div class="st-1"></div>
-                    <div class="st-2"></div>
-                    <div class="st-3"></div>
                 </div>
-
             </div>
         </div>
 
 
-        <div id="marketers" class="sec-marketers">
+        <div id="marketers" class="sec-marketers panel dark">
             <div class="bg-list">
                 <figure class="sm-bg1">
                     <img class="show-for-large" src="<?php echo MBN_ASSETS_URI ?>/img/img-marketers-1.jpg" alt="">
@@ -138,27 +149,51 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>  
 
+        
         <div id="sec-www" class="sec-www">
-            <div class="spacer"></div>
+            <div class="www-trigger">
+                <div class="panel trigger-1"></div>
+                <div class="panel trigger-2"></div>
+                <div class="panel trigger-3" style="height:40vh"></div>
+            </div>
 
             <div class="bg fixed" id="scrollbar">
                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-www.jpg" alt="">
             </div>
             
-            <div id="www-p1" class="www-p1">
+            <style>
+                #www-p1 {
+                    position: fixed;
+                    top:0;
+                    left: 0;
+                    right: 0;
+                    opacity: 0;
+                }
+            </style>
+            
+            <div id="www-p1" class="www-p1 www-work">
                 <div class="tp1-wrap">
                     <div class="tp1-w">
                         <span class="w1">W</span>
                         <span class="w2">W</span>
                         <span class="w3">W</span>
                     </div>
-                    <h2 class="tp1-h">we <a href="">do</a> winning work.</h2>
+                    <h2 class="tp1-h">we <a href="#"><i>do</i></a> winning work.</h2>
                 </div>
             </div>
 
-            <div id="www-p2" class="www-p2">
+            <style>
+                .www-projects {
+                    position: fixed;
+                    top:0;
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                }
+            </style>
+            <div id="www-p2" class="www-p2 www-projects">
                 <div class="grid-container">
                     <div class="port-scroller">
                         <div class="port-wrap">
@@ -198,77 +233,6 @@ get_header(); ?>
                                         <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
                                     </div>
                                 </li>
-                                <li class="port-1">
-                                    <div class="port-item">
-                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-asu-feat.jpg" alt=""></figure>
-                                        <h6 data-port="01">ASU</h6>
-                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                    </div>
-                                </li>
-                                <li class="port-2">
-                                    <div class="port-item">
-                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-mathnasium-feat.jpg" alt=""></figure>
-                                        <h6 data-port="02">Mathnasium</h6>
-                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                    </div>
-                                </li>
-                                <li class="port-3">
-                                    <div class="port-item">
-                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-pacific-legal-feat.jpg" alt=""></figure>
-                                        <h6 data-port="03">Pacifical Legal</h6>
-                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                    </div>
-                                </li>
-                                <li  class="port-4">
-                                    <div class="port-item">
-                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-tgi-fridays-feat.jpg" alt=""></figure>
-                                        <h6 data-port="04">TGI Fridays</h6>
-                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                    </div>
-                                </li>
-                                <li  class="port-5">
-                                    <div class="port-item">
-                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-boulder-feat.jpg" alt=""></figure>
-                                        <h6 data-port="05">Boulder</h6>
-                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                    </div>
-                                </li>
-                                <li class="port-1">
-                                    <div class="port-item">
-                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-asu-feat.jpg" alt=""></figure>
-                                        <h6 data-port="01">ASU</h6>
-                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                    </div>
-                                </li>
-                                <li class="port-2">
-                                    <div class="port-item">
-                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-mathnasium-feat.jpg" alt=""></figure>
-                                        <h6 data-port="02">Mathnasium</h6>
-                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                    </div>
-                                </li>
-                                <li class="port-3">
-                                    <div class="port-item">
-                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-pacific-legal-feat.jpg" alt=""></figure>
-                                        <h6 data-port="03">Pacifical Legal</h6>
-                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                    </div>
-                                </li>
-                                <li  class="port-4">
-                                    <div class="port-item">
-                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-tgi-fridays-feat.jpg" alt=""></figure>
-                                        <h6 data-port="04">TGI Fridays</h6>
-                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                    </div>
-                                </li>
-                                <li  class="port-5">
-                                    <div class="port-item">
-                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-boulder-feat.jpg" alt=""></figure>
-                                        <h6 data-port="05">Boulder</h6>
-                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
-                                    </div>
-                                </li>
-                                
                             </ul>
                         </div>
                         <!-- <div class="pages"></div> -->
@@ -281,7 +245,18 @@ get_header(); ?>
                 </div>
             </div>
 
-            <div class="www-p3" id="www-p3">   
+            
+
+            <style>
+                #www-p3.www-wedowin {
+                    position: absolute;
+                    top:100vh;
+                    left: 0;
+                    right: 0;
+                    height: 100vh;
+                }
+            </style>
+            <div class="www-p3 www-wedowin" id="www-p3">   
                 
                 <div class="tp1-wrap hide-for-medium">
                     <div class="tp1-w">
@@ -312,121 +287,142 @@ get_header(); ?>
                         </q>
                     </div>
                 </div>
-            </div>
+            </div>            
+            
+        </div>
 
-            <div class="www-p4">
-                <span id="www-p4"></span>
-                <div class="grid-container">
-                    <span class="pointer"></span>
-                    <ul class="grid-x grid-margin-x vidlist">
-                        <li class="cell medium-6 large-4">
-                            <div class="vidbox">
-                                <a class="btn-play" href="">
-                                    <img class="thumb" src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-getzuza.jpg" alt="">
-                                    <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-zuza.png" alt="">
-                                </a>
-                                <h6>Danny Mikhail 
-                                    <small>Founder & CEO  | 
-                                        <a href="#">GetZuza</a>
-                                    </small>
-                                </h6>
-                            </div>
-                        </li>
-                        <li class="cell medium-6 large-4">
-                            <div class="vidbox">
-                                <a class="btn-play" href="">
-                                    <img class="thumb" src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" alt="">
-                                    <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-rainbow-studios.png" alt="">
-                                </a>
-                                <h6>Devon Grousis
-                                    <small>Community Manager
-                                        <a href="#">Rainbow Studios</a>
-                                    </small>
-                                </h6>
-                            </div>
-                        </li>
-                        <li class="cell medium-6 large-4">
-                            <div class="vidbox">
-                                <a class="btn-play" href="">
-                                    <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-se-or-mist.jpg" alt="">
-                                    <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-se-or-mist.png" alt="">
-                                </a>
-                                <h6>Debbie Yuhas
-                                    <small>Señor Mist</small>
-                                </h6>
-                            </div>
-                        </li>
-                        <li class="cell medium-6 large-4">
-                            <div class="vidbox">
-                                <a class="btn-play" href="">
-                                    <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-ajo-als.jpg" alt="">
-                                    <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-ajo-als.png" alt="">
-                                </a>
-                                <h6>Patrick Dains
-                                    <small>Ajo Al’s</small>
-                                </h6>
-                            </div>
-                        </li>
-                        <li class="cell medium-6 large-4">
-                            <div class="vidbox">
-                                <a class="btn-play" href="">
-                                    <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-de-la-rosa-house-cleaning-llc.jpg" alt="">
-                                    <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-de-la-rosa-house-cleaning-llc.png" alt="">
-                                </a>
-                                <h6>Johnny Pallares
-                                    <small>De La Rosa House Cleaning, LLC.</small>
-                                </h6>
-                            </div>
-                        </li>
-                        <li class="cell medium-6 large-4">
-                            <div class="vidbox">
-                                <a class="btn-play" href="">
-                                    <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-the-landmark.jpg" alt="">
-                                    <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-the-landmark.png" alt="">
-                                </a>
-                                <h6>Rick Barlow 
-                                    <small>The Landmark</small>
-                                </h6>
-                            </div>
-                        </li>
-                        
-                        <li class="cell medium-6 large-4">
-                            <div class="vidbox">
-                                <a class="btn-play" href="">
-                                    <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-ajo-als.jpg" alt="">
-                                    <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-ajo-als.png" alt="">
-                                </a>
-                                <h6>Patrick Dains
-                                    <small>Ajo Al’s</small>
-                                </h6>
-                            </div>
-                        </li>
-                        <li class="cell medium-6 large-4">
-                            <div class="vidbox">
-                                <a class="btn-play" href="">
-                                    <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-de-la-rosa-house-cleaning-llc.jpg" alt="">
-                                    <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-de-la-rosa-house-cleaning-llc.png" alt="">
-                                </a>
-                                <h6>Johnny Pallares
-                                    <small>De La Rosa House Cleaning, LLC.</small>
-                                </h6>
-                            </div>
-                        </li>
-                        <li class="cell medium-6 large-4">
-                            <div class="vidbox">
-                                <a class="btn-play" href="">
-                                    <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-the-landmark.jpg" alt="">
-                                    <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-the-landmark.png" alt="">
-                                </a>
-                                <h6>Rick Barlow 
-                                    <small>The Landmark</small>
-                                </h6>
-                            </div>
-                        </li>
-                    </ul>
+        <div class="sec-videos">
+                
+                <style>
+                    #wrapper.light-bg .sec-videos .tp1-w {
+                        color: #fff;
+                        -webkit-text-stroke: 2px #fff;
+                    }
+                    #wrapper.light-bg .sec-videos .tp1-h {
+                        color: #fff;
+                    }
+                </style>
+            
+            <div class="www-p1">
+                <div class="tp1-wrap">
+                    <div class="tp1-w">
+                        <span class="w1">W</span>
+                        <span class="w2">W</span>
+                        <span class="w3">W</span>
+                    </div>
+                    <h2 class="tp1-h">we <a href="#"><i>do</i></a> winning work.</h2>
                 </div>
             </div>
-            
+
+            <div class="grid-container">
+                <span class="pointer"></span>
+                <ul class="grid-x grid-margin-x vidlist">
+                    <li class="cell medium-6 large-4">
+                        <div class="vidbox">
+                            <a class="btn-play" href="">
+                                <img class="thumb" src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-getzuza.jpg" alt="">
+                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-zuza.png" alt="">
+                            </a>
+                            <h6>Danny Mikhail 
+                                <small>Founder & CEO  | 
+                                    <a href="#">GetZuza</a>
+                                </small>
+                            </h6>
+                        </div>
+                    </li>
+                    <li class="cell medium-6 large-4">
+                        <div class="vidbox">
+                            <a class="btn-play" href="">
+                                <img class="thumb" src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" alt="">
+                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-rainbow-studios.png" alt="">
+                            </a>
+                            <h6>Devon Grousis
+                                <small>Community Manager
+                                    <a href="#">Rainbow Studios</a>
+                                </small>
+                            </h6>
+                        </div>
+                    </li>
+                    <li class="cell medium-6 large-4">
+                        <div class="vidbox">
+                            <a class="btn-play" href="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-se-or-mist.jpg" alt="">
+                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-se-or-mist.png" alt="">
+                            </a>
+                            <h6>Debbie Yuhas
+                                <small>Señor Mist</small>
+                            </h6>
+                        </div>
+                    </li>
+                    <li class="cell medium-6 large-4">
+                        <div class="vidbox">
+                            <a class="btn-play" href="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-ajo-als.jpg" alt="">
+                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-ajo-als.png" alt="">
+                            </a>
+                            <h6>Patrick Dains
+                                <small>Ajo Al’s</small>
+                            </h6>
+                        </div>
+                    </li>
+                    <li class="cell medium-6 large-4">
+                        <div class="vidbox">
+                            <a class="btn-play" href="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-de-la-rosa-house-cleaning-llc.jpg" alt="">
+                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-de-la-rosa-house-cleaning-llc.png" alt="">
+                            </a>
+                            <h6>Johnny Pallares
+                                <small>De La Rosa House Cleaning, LLC.</small>
+                            </h6>
+                        </div>
+                    </li>
+                    <li class="cell medium-6 large-4">
+                        <div class="vidbox">
+                            <a class="btn-play" href="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-the-landmark.jpg" alt="">
+                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-the-landmark.png" alt="">
+                            </a>
+                            <h6>Rick Barlow 
+                                <small>The Landmark</small>
+                            </h6>
+                        </div>
+                    </li>
+                    
+                    <li class="cell medium-6 large-4">
+                        <div class="vidbox">
+                            <a class="btn-play" href="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-ajo-als.jpg" alt="">
+                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-ajo-als.png" alt="">
+                            </a>
+                            <h6>Patrick Dains
+                                <small>Ajo Al’s</small>
+                            </h6>
+                        </div>
+                    </li>
+                    <li class="cell medium-6 large-4">
+                        <div class="vidbox">
+                            <a class="btn-play" href="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-de-la-rosa-house-cleaning-llc.jpg" alt="">
+                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-de-la-rosa-house-cleaning-llc.png" alt="">
+                            </a>
+                            <h6>Johnny Pallares
+                                <small>De La Rosa House Cleaning, LLC.</small>
+                            </h6>
+                        </div>
+                    </li>
+                    <li class="cell medium-6 large-4">
+                        <div class="vidbox">
+                            <a class="btn-play" href="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-the-landmark.jpg" alt="">
+                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-the-landmark.png" alt="">
+                            </a>
+                            <h6>Rick Barlow 
+                                <small>The Landmark</small>
+                            </h6>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div id="featin" class="sec-featin">
