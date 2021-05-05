@@ -86,6 +86,10 @@ function mbn_scripts() {
     wp_enqueue_style('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/fancybox.min.css', [], $wp_version);
     wp_enqueue_script('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/fancybox.min.js', [], $wp_version);
     
+    // Fancybox
+    wp_enqueue_style('mcsb', MBN_ASSETS_URI.'/vendor/mcsrollbar/mcsb.css', [], $wp_version);
+    wp_enqueue_script('mcsb', MBN_ASSETS_URI.'/vendor/mcsrollbar/mcsb.min.js', [], $wp_version);
+    
     //Home App
     if(is_page_template("templates/home.php")){
         wp_enqueue_script('home', MBN_ASSETS_URI.'/js/home.js', [], $wp_version, true);

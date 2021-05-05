@@ -272,7 +272,7 @@ body.intro-active {
         z-index: 999;
 
         //top:20%; with h6
-        top:21%;
+        top:30%;
         transform: none;
         
         .ss-h6 {
@@ -477,7 +477,7 @@ body.intro-active {
 
             position: absolute;
            // top:20%;
-            top:21%;
+            top:30%;
         }
 
         .align-middle {
@@ -574,6 +574,10 @@ body.intro-active {
 
             .si-2b {
                 font-weight: 400;
+            }
+
+            .si-1n {
+                display: inline-block;
             }
         }
 
@@ -1681,13 +1685,23 @@ body.intro-active {
 
         }
 
+        .port-scroller {
+            width: auto;
+            left: 0;
+            right: calc((-100vw - -1440px) / 2);
+        }
+
         .port-wrap {
-            margin-right: calc((-100vw - -75vw) / 2);
+            //margin-right: calc((-100vw - -75vw) / 2);
             position: absolute;
             top: 50%;
             left: 0;
             right: 0;
             transform: translate(0, -50%); 
+            
+        }
+        .port-wrap .mCSB_container {
+            width: calc(380px * 10) !important;
         }
 
         ul {
@@ -1699,12 +1713,10 @@ body.intro-active {
             
             li {
                 list-style: none;
-                //width: 450px;
-                //margin: 0 15px;
                 margin: 0;
                 width: 20vw;
+                width: 380px;
                 padding: 0 .7vw;
-                //flex: 1;
                 float: left;
             }
         }
@@ -1808,6 +1820,7 @@ body.intro-active {
         .grid-container {
             position: relative;
             height: 100vh;
+            height: 100%;
         }
 
         .wleft {
@@ -1830,6 +1843,7 @@ body.intro-active {
             }
 
             span {
+                display: inline-block;
                 opacity: 0;
             }
         }
@@ -1860,14 +1874,14 @@ body.intro-active {
             transform: translate(0, -50%);
 
             hr {
-                border-color: $color-primary;
+                //border-color: $color-primary;
+                border-color: $color-dark;
                 position: absolute;
-                //width: 700px;
-                //@debug: -400px;
-                width: 35vw;
-                left: -20vw;
-                transform: rotate(-45deg);
-                top: 0;
+                width: 30vw;
+                left: 6.5vw;
+                transform: rotate(135deg);
+                top: -10vw;
+                transform-origin: left;
             }
         }
 

@@ -4,14 +4,15 @@ $(document).foundation();
 
    var app = {
        onReady: function(){
-         app.niceScroll();
+        //app.niceScroll();
+        app.homeSB();
+
        },	
        onLoad: function(){
-        $(document).foundation();
 
         app.utils();
         app.smoothscroll();
-        app.homeScripts();
+        //app.homeScripts();
 
      },
 
@@ -76,49 +77,34 @@ $(document).foundation();
         });
      },
 
-     homeScripts: function(){
-
-      jQuery('.sec-marketers .bg-list').slick({
-         arrows: false,
-         fade: true,
-         autoplay: true,
-         autoplaySpeed: 2000
-      });
-     
-      var $frame  = jQuery('.port-wrap');
-         var $slidee = $frame.children('ul').eq(0);
-         var $wrap   = $frame.parent();
-   
-         // Call Sly on frame
-         $frame.sly({
-            horizontal: 1,
-            itemNav: 'basic',
-            smart: 1,
-            activateOn: 'mouseenter',
-            mouseDragging: 1,
-            touchDragging: 1,
-            releaseSwing: 1,
-            startAt: 0,
-            scrollBar: $wrap.find('.scrollbar'),
-            scrollBy: 1,
-            pagesBar: $wrap.find('.pages'),
-            activatePageOn: 'mouseenter',
-            speed: 300,
-            elasticBounds: 1,
-            easing: 'easeOutExpo',
-            dragHandle: 1,
-            dynamicHandle: 1,
-            clickBar: 1,
-   
+     homeSB: function(){
+      
+         $(".port-wrap").mCustomScrollbar({
+            axis:"x",
+            scrollButtons:{
+               enable:true,
+               scrollType:"stepped"
+            },
+            keyboard:{scrollType:"stepped"},
+            mouseWheel:{scrollAmount:380,normalizeDelta:true},
+            theme:"light-3",
+            snapAmount:380,
+            callbacks:{               
+               whileScrolling:function(){ 
+                  $("#scrollbar > img").css('transform','scale(1.'+(this.mcs.leftPct + 10) +')');
+               }
+            }
          });
-   
-         // sly.on('load', function (eventName) {
-         //    console.log(eventName); // 'load'
-         //    console.log(this.pos);  // Sly position object
-         // });
+         
+         jQuery('.sec-marketers .bg-list').slick({
+            arrows: false,
+            fade: true,
+            autoplay: true,
+            autoplaySpeed: 2000
+         });
      }
-     
    }
+
 
    document.addEventListener('DOMContentLoaded', app.onReady);
    window.addEventListener('load', app.onLoad);

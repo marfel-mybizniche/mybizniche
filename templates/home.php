@@ -6,11 +6,6 @@ get_header(); ?>
 
 <main id="content">
 
-        <style>
-            /* .sec-start.pofix  {z-index: 9999;} */
-        </style>
-
-
 
         <div class="sec-start pofix">
 
@@ -35,7 +30,7 @@ get_header(); ?>
                             <li><a href="">View Case Studies</a></li>
                         </ul> 
                     </aside> 
-
+ 
 
                     <div class="start-intro">
                         <div class="si-wrap align-self-middle">
@@ -156,11 +151,12 @@ get_header(); ?>
             <div class="www-trigger">
                 <div class="panel trigger-1"></div>
                 <div class="panel trigger-2"></div>
-                <div class="panel trigger-3" style="height:40vh"></div>
+                <div class="panel trigger-3" style="height:38vh"></div>
             </div>
 
             <div class="bg fixed" id="scrollbar">
                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-www.jpg" alt="">
+                <span style="position:absolute; left:100px; top:100px; color:white;"></span>
             </div>
             
             <style>
@@ -196,7 +192,7 @@ get_header(); ?>
             <div id="www-p2" class="www-p2 www-projects">
                 <div class="grid-container">
                     <div class="port-scroller">
-                        <div class="port-wrap">
+                        <div class="port-wrap content horizontal-images">
                             <ul>
                                 <li class="port-1">
                                     <div class="port-item">
@@ -233,13 +229,42 @@ get_header(); ?>
                                         <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
                                     </div>
                                 </li>
+                                <li class="port-1">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-asu-feat.jpg" alt=""></figure>
+                                        <h6 data-port="01">ASU</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li class="port-2">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-mathnasium-feat.jpg" alt=""></figure>
+                                        <h6 data-port="02">Mathnasium</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li class="port-3">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-pacific-legal-feat.jpg" alt=""></figure>
+                                        <h6 data-port="03">Pacifical Legal</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li  class="port-4">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-tgi-fridays-feat.jpg" alt=""></figure>
+                                        <h6 data-port="04">TGI Fridays</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
+                                <li  class="port-5">
+                                    <div class="port-item">
+                                        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/img-boulder-feat.jpg" alt=""></figure>
+                                        <h6 data-port="05">Boulder</h6>
+                                        <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
+                                    </div>
+                                </li>
                             </ul>
-                        </div>
-                        <!-- <div class="pages"></div> -->
-                        <div class="scrollbar">
-                            <div class="handle">
-                                <div class="mousearea"></div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -319,7 +344,7 @@ get_header(); ?>
                 <ul class="grid-x grid-margin-x vidlist">
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="">
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-getzuza.jpg" data-fancybox>
                                 <img class="thumb" src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-getzuza.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-zuza.png" alt="">
                             </a>
@@ -332,7 +357,7 @@ get_header(); ?>
                     </li>
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="">
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
                                 <img class="thumb" src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-rainbow-studios.png" alt="">
                             </a>
@@ -345,7 +370,7 @@ get_header(); ?>
                     </li>
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="">
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-se-or-mist.jpg" data-fancybox>
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-se-or-mist.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-se-or-mist.png" alt="">
                             </a>
@@ -356,7 +381,7 @@ get_header(); ?>
                     </li>
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="">
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-ajo-als.jpg" data-fancybox>
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-ajo-als.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-ajo-als.png" alt="">
                             </a>
@@ -367,7 +392,7 @@ get_header(); ?>
                     </li>
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="">
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-de-la-rosa-house-cleaning-llc.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-de-la-rosa-house-cleaning-llc.png" alt="">
                             </a>
@@ -378,7 +403,7 @@ get_header(); ?>
                     </li>
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="">
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-the-landmark.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-the-landmark.png" alt="">
                             </a>
@@ -390,7 +415,7 @@ get_header(); ?>
                     
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="">
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-ajo-als.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-ajo-als.png" alt="">
                             </a>
@@ -401,7 +426,7 @@ get_header(); ?>
                     </li>
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="">
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-de-la-rosa-house-cleaning-llc.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-de-la-rosa-house-cleaning-llc.png" alt="">
                             </a>
@@ -412,7 +437,7 @@ get_header(); ?>
                     </li>
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="">
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-the-landmark.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-the-landmark.png" alt="">
                             </a>
