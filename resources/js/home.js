@@ -91,92 +91,86 @@ if (sessionStorage.getItem('animate') == null){
 }
 
 
+const sections = document.querySelectorAll(".panel");
+
+function goToSection(section, anim) {
+      gsap.to(window, {
+         scrollTo: {y: section, autoKill: false},
+         duration: 1.2
+      });
+      anim && anim.restart();
+}
+sections.forEach(section => {
+   ScrollTrigger.create({
+      trigger: section,
+      start: "top 99%",
+      end: "bottom top",
+      //scrub: 5,
+      onEnter: () => goToSection(section),
+      onEnterBack: () => goToSection(section)
+   });
+});
+
+
 ScrollTrigger.matchMedia({ 
    
    // Media Query 
    // Desktop ======================================================
    "(min-width: 1024px)": function() {
     
-      
-      const sections = document.querySelectorAll(".panel");
-
-         function goToSection(section, anim) {
-         gsap.to(window, {
-            scrollTo: {y: section, autoKill: false},
-            duration: 1
-         });
-         
-         anim && anim.restart();
-         }
-
-         sections.forEach(section => {
-         
-         ScrollTrigger.create({
-            trigger: section,
-            end: "bottom top",
-            //scrub: 5,
-            onEnter: () => goToSection(section),
-            onEnterBack: () => goToSection(section)
-         });
-         
-      
-      });
-
-      let introMBNTrigger1 = gsap.timeline({
+      gsap.timeline({
          scrollTrigger: {
             trigger: ".sec-start .trigger-1",
             onEnter() {
-               introMbnTL.pause(0);
-               introMbnTL.pause(0);
+               introMbnPlay.pause(0);
              },
              onEnterBack() {
-               introMbnTL.pause(0);
-               //introRoiTL.pause(0);
+               introMbnPlay.pause(0);
              }
          }
       });
 
-      let introMBNTrigger = gsap.timeline({
+      gsap.timeline({
          scrollTrigger: {
             trigger: ".sec-start .trigger-2",
             onEnter() {
-               introMbnTL.pause(0);
-               introMbnTL.play();
+               introMbnPlay.pause(0);
+               introMbnPlay.play();
              },
              onEnterBack() {
-               //introMbnTL.pause(0);
+               //introMbnPlay.pause(0);
                introRoiTL.pause(0);
              }
          }
       });
-      let introMbnTL = gsap.timeline({paused: true});
+      let introMbnPlay = gsap.timeline({paused: true});
       
-      introMbnTL.to(".si-2a, .si-2b, .si-p", {opacity:0}, "-=1");     
-      introMbnTL.to(".si-1m", {top:0}, "-=1");
-      introMbnTL.to(".si-1b", {top:0, left:"-12.15vw"}, "-=1");
-      //introMbnTL.to(".si-1n", {left:"-23.4vw", bottom:"-14vh"}, "-=1");
-      introMbnTL.to(".si-1n", {left:"-23.4vw", y:"100%"}, "-=1");
-      introMbnTL.to(".si-h6", {opacity:0}, "-=1");
-      introMbnTL.to(".start-side", {opacity:1}, "-=.5");
-      introMbnTL.to(".si-h1", {opacity:0, visibility:"hidden"}, "-=.5");
+      introMbnPlay.to(".si-2a, .si-2b, .si-p", {opacity:0}, "-=1");     
+      introMbnPlay.to(".si-1m", {top:0}, "-=1");
+      introMbnPlay.to(".si-1b", {top:0, left:"-12.15vw"}, "-=1");
+      //introMbnPlay.to(".si-1n", {left:"-23.4vw", bottom:"-14vh"}, "-=1");
+      introMbnPlay.to(".si-1n", {left:"-23.4vw", y:"100%"}, "-=1");
+      introMbnPlay.to(".si-h6", {opacity:0}, "-=1");
+      introMbnPlay.to(".start-side", {opacity:1}, "-=.5");
+      introMbnPlay.to(".si-h1", {opacity:0, visibility:"hidden"}, "-=.5");
 
-      introMbnTL.to(".scroll .line", {height:20}, "-=.5");
-      introMbnTL.to(".scroll .circle .big", {scale:0.1}, "-=.5");
+      introMbnPlay.to(".scroll .line", {height:20}, "-=.5");
+      introMbnPlay.to(".scroll .circle .big", {scale:0.1}, "-=.5");
       
-      introMbnTL.to(".start-side .text li", {fontSize:"3.5vw"}, "+=.5");
-      introMbnTL.from(".si-copy p", {opacity:0, marginTop:50}, "-=.5");
-      introMbnTL.from(".si-copy h2", {opacity:0, position:"relative", top: 100, display: "none"}, "-=.4");
+      introMbnPlay.to(".start-side .text li", {fontSize:"3.5vw"}, "+=.5");
+      introMbnPlay.from(".si-copy p", {opacity:0, marginTop:50}, "-=.5");
+      introMbnPlay.from(".si-copy h2", {opacity:0, position:"relative", top: 100, display: "none"}, "-=.4");
 
-      introMbnTL.to(".start-side", {top:"21%"}, "-=.5");
+      introMbnPlay.to(".start-side", {top:"21%"}, "-=.5");
 
-      introMbnTL.to(".si-copy", {top:"20%"}, "-=.5");
-      introMbnTL.from(".si-copy h3", {opacity:0, position:"relative", top: 50, display: "none"}, "-=.3");
+      introMbnPlay.to(".si-copy", {top:"20%"}, "-=.5");
+      introMbnPlay.from(".si-copy h3", {opacity:0, position:"relative", top: 50, display: "none"}, "-=.3");
 
-      introMbnTL.to(".start-side .link", {opacity:1}, "-=.2");
-      introMbnTL.from(".start-side .link", {marginTop:100}, "-=.5");
-      introMbnTL.to(".scroll .line", {height:120});
+      introMbnPlay.to(".start-side .link", {opacity:1}, "-=.2");
+      introMbnPlay.from(".start-side .link", {marginTop:100}, "-=.5");
+      introMbnPlay.to(".scroll .line", {height:120});
 
-      let introRoiTrigger = gsap.timeline({
+      gsap.timeline({
          //paused: true,
          scrollTrigger: {
             trigger: ".sec-start .trigger-3",
@@ -223,7 +217,7 @@ ScrollTrigger.matchMedia({
 
 
 
-      let marketersTrigger = gsap.timeline({
+      gsap.timeline({
          scrollTrigger: {
             trigger: ".sec-marketers",
             onEnter() {
@@ -240,7 +234,6 @@ ScrollTrigger.matchMedia({
       });
 
       let wwwSec1TL = gsap.timeline({paused: true});
-      
       wwwSec1TL.to(".start-intro", {opacity:0}, "-=1");
       wwwSec1TL.to(".start-side .text li span", {opacity:0}, "-=1");
       wwwSec1TL.to(".start-side .link", {top:-600, opacity:0}, "-=.8");
@@ -256,14 +249,10 @@ ScrollTrigger.matchMedia({
       wwwSec1TL.from(".sec-marketers .buttons", {opacity:0}, "-=.5");
       wwwSec1TL.to(".sec-start", {visibility:"hidden"});
       
-         
-      
-      
-      //find dark background
-      //wwwSec1TL.to("#wrapper", { className: "dark-bg"});
 
 
-      let wwwWork = gsap.timeline({
+
+      gsap.timeline({
          //paused: true,
          scrollTrigger: {
             trigger: ".sec-www .trigger-1",
@@ -281,8 +270,8 @@ ScrollTrigger.matchMedia({
 
       let playWork = gsap.timeline({paused: true});
       
-      playWork.to(".www-work", {opacity:1}, "+=1");
-      playWork.from(".www-work", {marginTop:200}, "-=.8");
+      playWork.to(".www-work", {opacity:1}, "+=.8");
+      playWork.from(".www-work", {marginTop:200}, "-=.5");
       //playWork.from(".sec-www .bg", {scale:1.2, transformOrigin:"center"});
       playWork.from(".sec-www .tp1-w .w2", {marginLeft:0, duration:.5});
       playWork.from(".sec-www .tp1-w .w3", {marginLeft:0, duration:.5}, "-=.5");
@@ -301,14 +290,16 @@ ScrollTrigger.matchMedia({
       playWork.from(".www-p2 .port-4", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
       playWork.from(".www-p2 .port-5", {opacity:0, y: -200, x: 100, ease: "power2"}, "-=.4");
 
-      playWork.from(".www-p2 .mCSB_scrollTools", {opacity:0, y: 200, ease: "power2"}, "-=.4");
+      playWork.from("#mCSB_1_scrollbar_horizontal", {opacity:0, y: 200, ease: "power2"}, "-=.4");
+      
+      playWork.to(".port-scroller", { className: "port-scroller active-scroll"});  
 
       
       //playWork.to(".sec-www .bg", {position:"fixed"});    
 
 
 
-      let wwwMBN = gsap.timeline({
+      gsap.timeline({
          //paused: true,
          scrollTrigger: {
             trigger: ".sec-www .trigger-2",
@@ -365,7 +356,11 @@ ScrollTrigger.matchMedia({
       let wwwWeDoIn = gsap.timeline({paused: true});  
       //wwwWeDoIn.to(".www-wedowin", {position:"fixed", top:0, height: "45%"});
       wwwWeDoIn.to(".www-wedowin", {top: "175vh"});
-      wwwWeDoIn.to(".www-wedowin .wleft", {scale: ".6", transformOrigin: "top left"}, "-=.2");
+      wwwWeDoIn.to(".www-wedowin .wleft", {top:"55%"});
+      wwwWeDoIn.to(".www-wedowin .wleft", {scale: ".6", transformOrigin: "top left"}, "-=.5");
+      wwwWeDoIn.to(".www-wedowin .wright", {top:"50%"}, "-=.5");
+      
+      wwwWeDoIn.from(".sec-videos .vidbox", {opacity:0}, "-=.3");
 
 
       gsap.timeline({
@@ -373,7 +368,6 @@ ScrollTrigger.matchMedia({
             trigger: ".sec-videos",
             start: "top top",
             end: "bottom bottom",
-            markers: true,
             onEnter() {
                gsap.timeline().to("#wrapper", { className: "dark-bg"});  
                gsap.timeline().to(".sec-www .www-p1", { display:"none"});               
@@ -384,7 +378,7 @@ ScrollTrigger.matchMedia({
             onLeave(){ 
             },
             onLeaveBack(){ 
-              //introMbnTL.pause(0);
+              //introMbnPlay.pause(0);
             },
          }
       });
@@ -414,9 +408,30 @@ ScrollTrigger.matchMedia({
 
       gsap.timeline({
          scrollTrigger: {
+            trigger: ".sec-services .sr-ready",
+            start: "top top",
+            end: "bottom top",
+            onEnter() {
+               
+            },
+            onEnterBack() {      
+               
+            },
+            onLeave(){ 
+               
+            },
+            onLeaveBack(){ 
+               
+            },
+         }
+      });
+
+
+      gsap.timeline({
+         scrollTrigger: {
             trigger: ".sec-services .sr-menu",
             start: "top top",
-            end: "bottom bottom",
+            end: "bottom top",
             onEnter() {
                gsap.timeline().to("#wrapper", { className: "dark-bg"});               
             },
@@ -432,27 +447,63 @@ ScrollTrigger.matchMedia({
          }
       });
       
-
-      
-
       
    },
-
-
-
-
-   // Media Query 
-   // Desktop and tablet landscape ======================================================
  
-
-
 
 
    // Media Query 
    // Moble ======================================================
-   "(max-width: 767px)": function() {
+   "(max-width: 1023px)": function() {
 
       
+      gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-start .trigger-1",
+            onEnter() {
+               introMbnPlayMob.pause(0);
+             },
+             onEnterBack() {
+               introMbnPlayMob.pause(0);
+               introMbnRoiMob.pause(0);
+             }
+         }
+      });
+
+      gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-start .trigger-2",
+            onEnter() {
+               introMbnPlayMob.play();
+             },
+             onEnterBack() {
+               introMbnRoiMob.pause(0);
+             }
+         }
+      });
+      
+      let introMbnPlayMob = gsap.timeline({paused: true});
+      introMbnPlayMob.to(".start-intro .si-wrap", {opacity:0});   
+      introMbnPlayMob.to(".start-side", {opacity:1});   
+      introMbnPlayMob.to(".start-side .link", {opacity:1});   
+      introMbnPlayMob.from(".start-side .link", {marginTop:30}, "-=.5");   
+      introMbnPlayMob.to(".start-intro .si-copy", {opacity:1});   
+      
+      
+      gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-start .trigger-3",
+            onEnter() {
+               introMbnRoiMob.play();
+             },
+             onEnterBack() {
+             }
+         }
+      });
+      
+      let introMbnRoiMob = gsap.timeline({paused: true});
+      introMbnRoiMob.to(".start-intro .si-copy", {opacity:0});    
+      introMbnRoiMob.to(".start-intro .si-roi", {opacity:1});   
       
    }
 
@@ -464,8 +515,3 @@ jQuery('.skip-intro').click(function(){
    introTL.play("#intro");
    introTL.from(".navlogo", {opacity:0});
 });
-
-jQuery(function(){
-
-})
-

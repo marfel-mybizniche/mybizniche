@@ -26,8 +26,8 @@ get_header(); ?>
                             <li class="tn">n<span>ame</span></li>
                         </ul>
                         <ul class="link">
-                            <li><a href="">Get To Know Us</a></li>
-                            <li><a href="">View Case Studies</a></li>
+                            <li><a href="#" class="btn-custom">Get To Know Us</a></li>
+                            <li><a href="#" class="btn-custom">View Case Studies</a></li>
                         </ul> 
                     </aside> 
  
@@ -49,7 +49,7 @@ get_header(); ?>
                         </div> -->
 
                         <div class="si-copy grid-x">
-                            <div class="cell large-8 large-offset-3 xlarge-8 xlarge-offset-3">
+                            <div class="cell large-8 large-offset-4 xlarge-8 xlarge-offset-3">
                                 <p class="large">Every digital marketing company says their primary goal is to help businesses grow their revenue.</p>
                                 <h2><span class="si-we">we actually</span> <span class="si-do">do <i class="si-ball"></i></span> <span class="si-it">it.</span></h2>
                                 <h3>The essence of <i>what we do</i> is <b>ROI</b>.</h3>
@@ -181,12 +181,27 @@ get_header(); ?>
             </div>
 
             <style>
-                .www-projects {
-                    position: fixed;
-                    top:0;
-                    left: 0;
-                    right: 0;
-                    height: 100%;
+                /* SET OVERALL SCROLL WIDTH */
+                .sec-www .www-p2 .mCSB_container {
+                    width: calc(380px * 10) !important;
+                }
+
+                /* SET PORTFOLIO ITEM WIDTH */
+                .sec-www .www-p2 ul li {
+                    width: 380px;
+                }
+
+                @media(max-width:1280px) {
+
+                    /* SET OVERALL SCROLL WIDTH */
+                    .sec-www .www-p2 .mCSB_container {
+                        width: calc(300px * 10) !important;
+                    }
+
+                    /* SET PORTFOLIO ITEM WIDTH */
+                    .sec-www .www-p2 ul li {
+                        width: 300px;
+                    }
                 }
             </style>
             <div id="www-p2" class="www-p2 www-projects">
@@ -392,7 +407,7 @@ get_header(); ?>
                     </li>
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-de-la-rosa-house-cleaning-llc.jpg" data-fancybox>
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-de-la-rosa-house-cleaning-llc.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-de-la-rosa-house-cleaning-llc.png" alt="">
                             </a>
@@ -403,41 +418,7 @@ get_header(); ?>
                     </li>
                     <li class="cell medium-6 large-4">
                         <div class="vidbox">
-                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-the-landmark.jpg" alt="">
-                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-the-landmark.png" alt="">
-                            </a>
-                            <h6>Rick Barlow 
-                                <small>The Landmark</small>
-                            </h6>
-                        </div>
-                    </li>
-                    
-                    <li class="cell medium-6 large-4">
-                        <div class="vidbox">
-                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-ajo-als.jpg" alt="">
-                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-ajo-als.png" alt="">
-                            </a>
-                            <h6>Patrick Dains
-                                <small>Ajo Al’s</small>
-                            </h6>
-                        </div>
-                    </li>
-                    <li class="cell medium-6 large-4">
-                        <div class="vidbox">
-                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-de-la-rosa-house-cleaning-llc.jpg" alt="">
-                                <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-de-la-rosa-house-cleaning-llc.png" alt="">
-                            </a>
-                            <h6>Johnny Pallares
-                                <small>De La Rosa House Cleaning, LLC.</small>
-                            </h6>
-                        </div>
-                    </li>
-                    <li class="cell medium-6 large-4">
-                        <div class="vidbox">
-                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-rainbow-studios.jpg" data-fancybox>
+                            <a class="btn-play" href="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-the-landmar.jpg" data-fancybox>
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-video-feat-the-landmark.jpg" alt="">
                                 <img class="logo" src="<?php echo MBN_ASSETS_URI ?>/img/logo-the-landmark.png" alt="">
                             </a>

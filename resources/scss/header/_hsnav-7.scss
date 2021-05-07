@@ -368,7 +368,27 @@ header {
 			}
 
 			@include media(max-width, 1366px) {
-				
+
+				min-height: 80px;
+
+				.logo, .navlogo {
+					width: 100px;
+					margin-top: 10px;
+
+					.alt {
+						font-size: 17px;
+						vertical-align: top;
+					}
+				}
+
+				.navutil {
+					padding-top: 22px;
+				}
+
+				.navicon {
+					top: 22px;
+				}
+
 				.navmenu {
 					.menu-items {
 						ul li {

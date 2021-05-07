@@ -4,7 +4,6 @@ $(document).foundation();
 
    var app = {
        onReady: function(){
-        //app.niceScroll();
         app.homeSB();
 
        },	
@@ -14,15 +13,6 @@ $(document).foundation();
         app.smoothscroll();
         //app.homeScripts();
 
-     },
-
-     //Nice scroll all pages
-     niceScroll: function(){
-         jQuery("body").niceScroll({
-            cursoropacitymin: 1,
-            zindex: 9999,
-            scrollspeed: 10
-         });
      },
 
      utils: function(){
@@ -82,7 +72,7 @@ $(document).foundation();
          $(".port-wrap").mCustomScrollbar({
             axis:"x",
             scrollButtons:{
-               enable:true,
+               enable:false,
                scrollType:"stepped"
             },
             keyboard:{scrollType:"stepped"},
@@ -100,7 +90,9 @@ $(document).foundation();
             arrows: false,
             fade: true,
             autoplay: true,
-            autoplaySpeed: 2000
+            autoplaySpeed: 1000,
+            pauseOnFocus: false,
+            pauseOnHover:false
          });
      }
    }
