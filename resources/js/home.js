@@ -182,7 +182,7 @@ ScrollTrigger.matchMedia({
              onEnterBack() {
                gsap.timeline().to("#wrapper", { className: "light-bg"});
               // introRoiTL.pause(0);
-               wwwSec1TL.pause(0);
+               wwwMarketTL.pause(0);
                gsap.timeline().from(".si-roi", { opacity: 0}, "+=.5");
                playWork.pause(0);   
                
@@ -222,32 +222,32 @@ ScrollTrigger.matchMedia({
             trigger: ".sec-marketers",
             onEnter() {
                gsap.timeline().to("#wrapper", {className: "dark-bg"}, "+=.5");
-               wwwSec1TL.pause(0);
-               wwwSec1TL.play();
+               wwwMarketTL.pause(0);
+               wwwMarketTL.play();
             },
             onEnterBack() {
                gsap.timeline().to("#wrapper", {className: "dark-bg"}, "+=.5");
-              // wwwSec1TL.pause(0);
+              // wwwMarketTL.pause(0);
                //playWork.pause(0);   
             },
          }
       });
 
-      let wwwSec1TL = gsap.timeline({paused: true});
-      wwwSec1TL.to(".start-intro", {opacity:0}, "-=1");
-      wwwSec1TL.to(".start-side .text li span", {opacity:0}, "-=1");
-      wwwSec1TL.to(".start-side .link", {top:-600, opacity:0}, "-=.8");
-      wwwSec1TL.to(".start-side .text .tn", {fontSize:"3.5vw", top:"-3.5vw", left:"5vw"}, "-=.5");
-      wwwSec1TL.to(".start-side .text .tm", {fontSize:"3.5vw"}, "-=.5");
-      wwwSec1TL.to(".start-side .text .tb", {fontSize:"3.5vw"}, "-=.5");
-      wwwSec1TL.to(".start-side ", {top: "21vh"}, "+=.5");
+      let wwwMarketTL = gsap.timeline({paused: true});
+      wwwMarketTL.to(".start-intro", {opacity:0}, "-=1");
+      wwwMarketTL.to(".start-side .text li span", {opacity:0}, "-=1");
+      wwwMarketTL.to(".start-side .link", {top:-600, opacity:0}, "-=.8");
+      wwwMarketTL.to(".start-side .text .tn", {fontSize:"3.5vw", top:"-3.5vw", left:"5vw"}, "-=.5");
+      wwwMarketTL.to(".start-side .text .tm", {fontSize:"3.5vw"}, "-=.5");
+      wwwMarketTL.to(".start-side .text .tb", {fontSize:"3.5vw"}, "-=.5");
+      wwwMarketTL.to(".start-side ", {top: "21vh"}, "+=.5");
 
-      wwwSec1TL.from(".sec-marketers .title", {opacity:0}, "=-1");
-      wwwSec1TL.to(".start-side", {display: "none"}, "-=.5");
-      wwwSec1TL.from(".sec-marketers .body", {ease: "back", y: 300, opacity:0}, "-=.5");
-      wwwSec1TL.from(".sec-marketers .team", {ease: "back", y: 300, opacity:0}), "-=.5";
-      wwwSec1TL.from(".sec-marketers .buttons", {opacity:0}, "-=.5");
-      wwwSec1TL.to(".sec-start", {visibility:"hidden"});
+      wwwMarketTL.from(".sec-marketers .title", {opacity:0}, "=-1");
+      wwwMarketTL.to(".start-side", {display: "none"}, "-=.5");
+      wwwMarketTL.from(".sec-marketers .body", {ease: "back", y: 300, opacity:0}, "-=.5");
+      wwwMarketTL.from(".sec-marketers .team", {ease: "back", y: 300, opacity:0}), "-=.5";
+      wwwMarketTL.from(".sec-marketers .buttons", {opacity:0}, "-=.5");
+      wwwMarketTL.to(".sec-start", {visibility:"hidden"});
       
 
 
@@ -330,12 +330,6 @@ ScrollTrigger.matchMedia({
       wwwMbnPlay.to(".www-p3 .title span", {opacity:1});
       wwwMbnPlay.from(".www-p3 .desc", {opacity:0, top:100}, "-=.5");
 
-
-      let scrollTL66 = gsap.timeline({paused: true});
-      scrollTL66.to(window, {duration: 1, scrollTo: "#www-p4", offsetY:200});
-      scrollTL66.to(".sec-www .www-p3 .wleft", {top:"85vh"}, "-=.5");
-      scrollTL66.to(".sec-www .www-p3 .wright", {top:"88vh"}, "-=.5");
-      scrollTL66.to(".sec-www .www-p3 .title", {fontSize:40}, "-=.5");
       
 
       
@@ -406,25 +400,6 @@ ScrollTrigger.matchMedia({
          }
       });
 
-      gsap.timeline({
-         scrollTrigger: {
-            trigger: ".sec-services .sr-ready",
-            start: "top top",
-            end: "bottom top",
-            onEnter() {
-               
-            },
-            onEnterBack() {      
-               
-            },
-            onLeave(){ 
-               
-            },
-            onLeaveBack(){ 
-               
-            },
-         }
-      });
 
 
       gsap.timeline({
@@ -455,7 +430,7 @@ ScrollTrigger.matchMedia({
    // Media Query 
    // Moble ======================================================
    "(max-width: 1023px)": function() {
-
+      //location.reload();
       
       gsap.timeline({
          scrollTrigger: {
@@ -487,7 +462,7 @@ ScrollTrigger.matchMedia({
       introMbnPlayMob.to(".start-side", {opacity:1});   
       introMbnPlayMob.to(".start-side .link", {opacity:1});   
       introMbnPlayMob.from(".start-side .link", {marginTop:30}, "-=.5");   
-      introMbnPlayMob.to(".start-intro .si-copy", {opacity:1});   
+      introMbnPlayMob.to(".start-intro .si-copy", {opacity:1}, "-=.3");   
       
       
       gsap.timeline({
@@ -497,21 +472,162 @@ ScrollTrigger.matchMedia({
                introMbnRoiMob.play();
              },
              onEnterBack() {
+               wwwMarketMob.pause(0);
              }
          }
       });
       
       let introMbnRoiMob = gsap.timeline({paused: true});
       introMbnRoiMob.to(".start-intro .si-copy", {opacity:0});    
-      introMbnRoiMob.to(".start-intro .si-roi", {opacity:1});   
+      introMbnRoiMob.to(".start-intro .si-roi", {opacity:1});  
+      
+      
+      gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-marketers",
+            onEnter() {
+               gsap.timeline().to("#wrapper", {className: "dark-bg"}, "+=.5");
+               wwwMarketMob.play();
+            },
+            onEnterBack() {
+               gsap.timeline().to("#wrapper", {className: "dark-bg"}, "+=.5");
+              // wwwMarketMob.pause(0);
+               playWorkMob.pause(0);   
+            },
+         }
+      });
+      let wwwMarketMob = gsap.timeline({paused: true});
+      wwwMarketMob.to(".start-intro", {display:"block"});
+      wwwMarketMob.to(".start-intro", {opacity:0});
+      wwwMarketMob.from(".sec-marketers .title", {opacity:0});
+      wwwMarketMob.from(".sec-marketers .body", {ease: "back", y: 300, opacity:0});
+      wwwMarketMob.from(".sec-marketers .team", {ease: "back", y: 300, opacity:0}), "-=.5";
+      wwwMarketMob.from(".sec-marketers .buttons", {opacity:0}, "-=.5");
+      wwwMarketMob.to(".sec-start", {visibility:"hidden"});
+
+
+
+      gsap.timeline({
+         //paused: true,
+         scrollTrigger: {
+            trigger: ".sec-www .trigger-1",
+            onEnter() {
+               gsap.timeline().to("#wrapper", { className: "dark-bg"});
+               playWorkMob.play();
+            },
+            onEnterBack() {  
+               gsap.timeline().to("#wrapper", { className: "dark-bg"});
+              //playWorkMob.pause(0);   
+              wwwMbnPlayMob.pause(0);        
+            }
+         }
+      });
+
+      let playWorkMob = gsap.timeline({paused: true});
+      
+      playWorkMob.to(".www-work", {display:"block"});
+      playWorkMob.to(".www-work", {opacity:1});
+      playWorkMob.from(".www-projects", {marginTop:50});
+      playWorkMob.to(".www-projects", {opacity:1}, "-=.5");
+      playWorkMob.to(".port-scroller", { className: "port-scroller active-scroll"});  
+
+   
+
+
+
+      gsap.timeline({
+         //paused: true,
+         scrollTrigger: {
+            trigger: ".sec-www .trigger-2",
+            onEnter() {
+               gsap.timeline().to("#wrapper", { className: "light-bg"});
+               wwwMbnPlayMob.play();
+            },
+            onEnterBack() {  
+               //gsap.timeline().to("#wrapper", { className: "light-bg"});   
+               //gsap.timeline().to("#wrapper", { className: "dark-bg"});
+              //playWork.pause(0);   
+              wwwWeDoInMob.pause(0);               
+            },
+            onLeave() {
+               //wwwWeDoInMob.play();     
+            }
+         }
+      });
+
+      let wwwMbnPlayMob = gsap.timeline({paused: true});  
+      wwwMbnPlayMob.to(".www-work", {display:"none"}, "-=1");
+      wwwMbnPlayMob.from(".www-p3 .wleft", {opacity:0});
+      wwwMbnPlayMob.to(".www-p3 .title span", {opacity:1}, "-=.5");
+      wwwMbnPlayMob.from(".www-p3 .wright", {opacity:0});     
+
+
+      gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-videos",
+            start: "top top",
+            end: "bottom bottom",
+            onEnter() {
+               gsap.timeline().to("#wrapper", { className: "dark-bg"});  
+               gsap.timeline().to(".sec-www .www-p1", { display:"none"});               
+            },
+            onEnterBack() {    
+               gsap.timeline().to(".sec-www .www-p1", { display:"block"});              
+            },
+            onLeave(){ 
+            },
+            onLeaveBack(){ 
+              //introMbnPlay.pause(0);
+            },
+         }
+      });
+      
+      let mbnVideo = gsap.timeline({paused: true});  
+
+
+
+      gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-featin",
+            start: "top top",
+            end: "bottom bottom",
+            onEnter() {
+               gsap.timeline().to("#wrapper", { className: "light-bg"});               
+            },
+            onEnterBack() {         
+                  
+            },
+            onLeave(){ 
+            },
+            onLeaveBack(){ 
+               gsap.timeline().to("#wrapper", { className: "dark-bg"});    
+            },
+         }
+      });
+
+
+
+      gsap.timeline({
+         scrollTrigger: {
+            trigger: ".sec-services .sr-menu",
+            start: "top top",
+            end: "bottom top",
+            onEnter() {
+               gsap.timeline().to("#wrapper", { className: "dark-bg"});               
+            },
+            onEnterBack() {      
+               gsap.timeline().to("#wrapper", { className: "dark-bg"});                      
+            },
+            onLeave(){ 
+               gsap.timeline().to("#wrapper", { className: "light-bg"});  
+            },
+            onLeaveBack(){ 
+               gsap.timeline().to("#wrapper", { className: "light-bg"});   
+            },
+         }
+      });
       
    }
 
 }); 
 
-
-jQuery('.skip-intro').click(function(){
-   introTL.pause();
-   introTL.play("#intro");
-   introTL.from(".navlogo", {opacity:0});
-});

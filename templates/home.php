@@ -64,7 +64,7 @@ get_header(); ?>
 
                         <div class="si-roi">
                             <div class="your-roi hide-for-large">
-                                <h3>The essence of <i>what we do</i> is <b>ROI</b>.</h3>
+                                <!-- <h3>The essence of <i>what we do</i> is <b>ROI</b>.</h3> -->
                                 <img class="dollar" src="<?php echo MBN_ASSETS_URI ?>/img/img-dollars.png" alt="">
                                 <h2><small>Your</small>   ROI</h2>
                                 <p>Simply put, we bring you more customers. 
@@ -160,13 +160,6 @@ get_header(); ?>
             </div>
             
             <style>
-                #www-p1 {
-                    position: fixed;
-                    top:0;
-                    left: 0;
-                    right: 0;
-                    opacity: 0;
-                }
             </style>
             
             <div id="www-p1" class="www-p1 www-work">
@@ -298,14 +291,7 @@ get_header(); ?>
             </style>
             <div class="www-p3 www-wedowin" id="www-p3">   
                 
-                <div class="tp1-wrap hide-for-medium">
-                    <div class="tp1-w">
-                        <span class="w1">W</span>
-                        <span class="w2">W</span>
-                        <span class="w3">W</span>
-                    </div>
-                    <h2 class="tp1-h">we <a href="">do</a> winning work.</h2>
-                </div>
+                
 
                 <div class="grid-container">
                     <div class="wleft">     
